@@ -2,7 +2,7 @@ name: Deploy Hugo site to Pages
 
 on:
   push:
-    branches: ["master"]  # Note: using master instead of main
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -24,6 +24,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
