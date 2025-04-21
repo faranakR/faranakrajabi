@@ -116,11 +116,18 @@
 }
 
 /* Update profile picture styles */
-.profile-picture {
-  width: 250px;
-  height: 250px;
+/* .profile-picture {
+  width: 350px;
+  height: 300px;
   border-radius: 50%;
+} */
+
+.masthead-avatar.profile-picture {
+  width: 250px !important;
+  height: 300px !important;
+  border-radius: 100% !important;
 }
+
 
 /* Social icons styling */
 .social-section {
