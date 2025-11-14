@@ -32,7 +32,7 @@ I'm actively seeking positions in computational science, scientific software dev
 
 - **[March 2025]**: Our paper **Optimal Control for Stochastic Neural Oscillators** was published in Biological Cybernetics! [[Paper](https://link.springer.com/article/10.1007/s00422-025-00999-4)]
 
-- **[December 2024]**: Passed my PhD candidacy exam! 🎓 [[Slides](#)] 
+- **[December 2024]**: Passed my PhD candidacy exam! 🎓 [[Slides](/assets/files/Candidacy_talk.pdf)] 
 
 - **[September 2023]**: Started concurrent Master's degree in Computer Science at UCSB.
 
