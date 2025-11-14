@@ -11,7 +11,7 @@ I'm a fourth-year PhD candidate in Mechanical Engineering with a concurrent Mast
 
 Currently, I'm developing a multiscale continuum framework for protein aggregation in high-concentration biotherapeutic formulations. This work bridges molecular-scale protein dynamics with continuum PDEs to predict long-term stability of therapeutic proteins using level-set methods, adaptive mesh refinement, and parallel computing. I also work on stochastic optimal control of neural oscillators with applications to Parkinson's disease.
 
-Prior to my PhD, I obtained my BS in Aerospace Engineering from Sharif University of Technology, Iran. I'm also passionate about teaching scientific computing—having instructed 1000+ students—and offer consulting in computational methods and programming.
+Prior to my PhD, I obtained my BS in Aerospace Engineering from Sharif University of Technology, Iran. I'm also passionate about teaching scientific computing, having instructed 1000+ students, and offer consulting in computational methods and programming.
 
 Please feel free to reach out if our work or interests align! **[Schedule a meeting](https://calendar.google.com/calendar/appointments)** or **[email me](mailto:faranakrajabi@ucsb.edu)**.
 
