@@ -1,0 +1,45 @@
+baseURL = "https://faranakrajabi.com/"
+title = "Faranak Rajabi"
+theme = "noteworthy"
+copyright = "© 2025 Faranak Rajabi. Modified from Noteworthy theme."
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 5
+
+[params]
+  author = "Faranak Rajabi"
+  description = "PhD candidate in Mechanical Engineering and Computer Science at UC Santa Barbara"
+  
+  # Social media
+  email = "faranakrajabi@ucsb.edu"
+  github = "https://github.com/faranakR"
+  linkedin = "https://www.linkedin.com/in/faranak-rajabi/"
+  googlescholar = "https://scholar.google.com/citations?user=wm1TmUAAAAAJ"
+  
+  # Show read more link
+  showReadMore = true
+
+[menu]
+  [[menu.main]]
+    name = "Research"
+    url = "/research/"
+    weight = 1
+  [[menu.main]]
+    name = "Publications"
+    url = "/publications/"
+    weight = 2
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 3
+  [[menu.main]]
+    name = "About Me"
+    url = "/about/"
+    weight = 4
+
+[markup]
+  [markup.highlight]
+    style = "github"
+  [markup.goldmark.renderer]
+    unsafe = true
