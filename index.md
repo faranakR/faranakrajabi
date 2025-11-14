@@ -19,11 +19,11 @@ Please feel free to reach out if our work or interests align! **[Schedule a meet
 
 I'm actively seeking positions in computational science, scientific software development, and applied mathematics. If my profile aligns with opportunities at your organization, I'd love to connect!
 
-### 🎓 Education
+<!-- ### 🎓 Education
 
 **PhD, Mechanical Engineering** | UC Santa Barbara | 2022 - Dec 2026  
 **MS, Computer Science** | UC Santa Barbara | 2023 - Dec 2025  
-**BS, Aerospace Engineering** | Sharif University of Technology, Iran | 2016 - 2021 
+**BS, Aerospace Engineering** | Sharif University of Technology, Iran | 2016 - 2021  -->
 
 ## 📣 News
 
