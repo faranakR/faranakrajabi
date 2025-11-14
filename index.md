@@ -13,7 +13,7 @@ Currently, I'm developing a multiscale continuum framework for protein aggregati
 
 Prior to my PhD, I obtained my BS in Aerospace Engineering from Sharif University of Technology, Iran. I'm also passionate about teaching scientific computing, having instructed 1000+ students, and offer consulting in computational methods and programming.
 
-Please feel free to reach out if our work or interests align! **[Schedule a meeting](https://calendar.google.com/calendar/appointments)** or **[email me](mailto:faranakrajabi@ucsb.edu)**.
+Please feel free to reach out if our work or interests align! **[Schedule a meeting](https://calendar.google.com/calendar/u/0/appointments/AcZssZ3_BzygdfmAjpLYVsIno5k5evzktA6aiSIdjgs=)** or **[email me](mailto:faranakrajabi@ucsb.edu)**.
 
 ### On the Job Market 🎯
 
