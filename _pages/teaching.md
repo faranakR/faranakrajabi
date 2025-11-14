@@ -93,4 +93,21 @@ Fundamental principles of motion and forces in engineering systems.
 
 ---
 
+## Open-Source Course Materials
+
+### C++ Development Course
+
+I've developed a comprehensive C++ programming course with all materials freely available:
+
+**[GitHub Repository](https://github.com/faranakR/full-cpp-tutorial-code)** | **[Course PDF](https://github.com/faranakR/full-cpp-tutorial-code/blob/main/docs/Cpp_course.pdf)**
+
+- **204 curated code examples** across 29 chapters
+- **Complete documentation** with learning paths (beginner → advanced)
+- **Topics:** Functions, OOP, Templates, STL, Smart Pointers, Concurrency, Modern C++ (C++11/14/17/20)
+- **MIT License** - freely available for students and educators
+
+*Perfect for self-study or as supplementary material for programming courses*
+
+---
+
 *Interested in having me as a TA or guest lecturer?* [Contact me](mailto:faranakrajabi@ucsb.edu)!
