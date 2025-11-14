@@ -113,7 +113,7 @@ author_profile: true
     </button>
   </div>
 
-  <p style="margin-top: 2em;">And enjoy some photos of my sweet kitty while my resume loads 🐱💖</p>
+  <p style="margin-top: 2em;">And enjoy some photos of my cutie pie while the files load!</p>
 
   <div class="progress-container" id="progressContainer">
     <div class="progress-bar">
