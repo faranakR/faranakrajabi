@@ -1,0 +1,55 @@
+=================================
+NEW PHOTO ENTRY TEMPLATE
+=================================
+
+Copy this template when adding a new photo:
+
+BASIC INFO:
+-----------
+Category: [cooking / hiking / boxing]
+Filename: [e.g., food7.jpg]
+Date Taken: [YYYY-MM-DD]
+Location: [Where was this taken?]
+
+DESCRIPTION:
+------------
+Primary Subject: [What's the main focus?]
+People in Photo: [Solo / Friends / GHMC / etc.]
+Caption for Website: [What should visitors see when hovering?]
+
+TAGS:
+-----
+[Separate with semicolons, e.g., "pasta;seafood;homemade"]
+
+CATEGORY-SPECIFIC INFO:
+-----------------------
+
+If COOKING:
+- Dish Name:
+- Occasion: [Dinner party / Weekend meal / Special event]
+- Recipe Notes:
+
+If HIKING:
+- Trail Name:
+- Elevation Gain:
+- Distance:
+- Companions:
+- Weather:
+
+If BOXING:
+- Activity Type: [Kickboxing / Boxing / Training]
+- Duration:
+- Focus Area: [Cardio / Power / Technique]
+
+STATUS:
+-------
+[X] Photo edited and ready
+[X] Photo copied to assets/images/
+[X] Added to MASTER_PHOTO_LOG.csv
+[X] Added to category CSV
+[X] Tested on website
+[X] Status updated to "published"
+
+NOTES:
+------
+[Any additional context or stories about this photo]

@@ -1,0 +1,200 @@
+---
+---
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+
+/* ────────────────────────────────────────────────
+   SIDEBAR (BIG + STABLE WIDTHS)
+   ──────────────────────────────────────────────── */
+
+.sidebar {
+  @include breakpoint($large) {
+    width: 380px !important; // slightly smaller for balanced layout
+  }
+
+  @include breakpoint($x-large) {
+    width: 420px !important;
+  }
+}
+
+
+/* ────────────────────────────────────────────────
+   MAIN CONTENT (SMALL GAP FROM SIDEBAR, RIGHT MARGIN)
+   ──────────────────────────────────────────────── */
+
+.page {
+  @include breakpoint($large) {
+    float: right !important;
+    width: calc(100% - 380px) !important;
+    padding-left: 0.75em !important;   // SMALL gap from sidebar
+    padding-right: 3em !important;     // right wall breathing room
+  }
+
+  @include breakpoint($x-large) {
+    width: calc(100% - 420px) !important;
+    padding-left: 0.75em !important;
+    padding-right: 3.5em !important;
+  }
+}
+
+
+/* ────────────────────────────────────────────────
+   CONTENT WRAPPERS (FULL WIDTH)
+   ──────────────────────────────────────────────── */
+
+.page__inner-wrap,
+.page__content,
+.archive {
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.page article {
+  max-width: none !important;
+}
+
+
+/* ────────────────────────────────────────────────
+   BIG PROFILE PICTURE (CLEAN + LARGE)
+   ──────────────────────────────────────────────── */
+
+.author__avatar img {
+  max-width: 230px !important;
+  border-radius: 50%;
+}
+
+.author__avatar {
+  @include breakpoint($large) {
+    width: 230px !important;
+    height: auto !important;
+    margin-bottom: 1em !important;
+  }
+}
+
+
+/* ────────────────────────────────────────────────
+   AUTHOR TEXT SIZE (NAME, BIO, LINKS)
+   ──────────────────────────────────────────────── */
+
+.author__name {
+  font-size: 1.9em !important;
+  margin-bottom: 0.4em !important;
+}
+
+.author__bio {
+  font-size: 1.15em !important;
+  line-height: 1.55 !important;
+  margin-top: 0.6em !important;
+}
+
+.author__urls {
+  font-size: 1.1em !important;
+}
+
+.author__urls li {
+  padding: 0.35em 0 !important;
+}
+
+.author__urls a {
+  font-size: 1em !important;
+}
+
+.author__urls .fa,
+.author__urls .fas,
+.author__urls .fab {
+  font-size: 1.25em !important;
+  margin-right: 0.45em !important;
+}
+
+
+/* ────────────────────────────────────────────────
+   BASE FONTS (GLOBAL)
+   ──────────────────────────────────────────────── */
+
+html {
+  font-size: 14px !important;
+
+  @include breakpoint($medium) {
+    font-size: 15px !important;
+  }
+  @include breakpoint($large) {
+    font-size: 15px !important;
+  }
+  @include breakpoint($x-large) {
+    font-size: 16px !important;
+  }
+}
+
+
+/* ────────────────────────────────────────────────
+   TYPOGRAPHY (BLACK H1, NAVY SUBHEADERS)
+   ──────────────────────────────────────────────── */
+
+/* H1 — match sidebar name (pure black) */
+.page__content h1,
+.archive h1,
+.page__title {
+  font-size: 1.9em !important;
+  color: #000000 !important;   // pure black
+  font-weight: 700 !important;
+}
+
+/* H2 — deep navy */
+.page__content h2,
+.archive h2 {
+  font-size: 1.45em !important;
+  color: #001f3f !important;   // dark navy
+  font-weight: 600 !important;
+}
+
+/* H3 — medium navy */
+.page__content h3,
+.archive h3 {
+  font-size: 1.25em !important;
+  color: #003366 !important;   // medium navy
+  font-weight: 600 !important;
+}
+
+/* Teaching Evaluation Bars (multi-color) */
+.rating-item {
+  margin-bottom: 1.2em;
+}
+
+.rating-label {
+  font-weight: 600;
+  margin-bottom: 0.25em;
+  color: #001f3f;
+}
+
+.bar {
+  width: 100%;
+  background: #e6e6e6;
+  border-radius: 6px;
+  height: 10px;
+  overflow: hidden;
+}
+
+/* COLOR THEMES */
+.bar-blue .bar-fill {
+  background: linear-gradient(90deg, #0074D9, #001f3f);
+}
+
+.bar-teal .bar-fill {
+  background: linear-gradient(90deg, #2ECC40, #0e812b);
+}
+
+.bar-purple .bar-fill {
+  background: linear-gradient(90deg, #B10DC9, #611071);
+}
+
+.bar-gold .bar-fill {
+  background: linear-gradient(90deg, #FFDC00, #b49a00);
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 6px;
+}

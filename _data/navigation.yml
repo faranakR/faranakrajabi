@@ -1,0 +1,17 @@
+main:
+  - title: "Research"
+    url: /research/
+  - title: "Publications"
+    url: /publications/
+  - title: "Resume/CV"
+    url: /resume/
+  - title: "Teaching"
+    url: /teaching/
+  - title: "Mentoring"
+    url: /mentoring/
+  - title: "Leadership"
+    url: /leadership/
+  - title: "Blog"
+    url: /year-archive/
+  - title: "About"
+    url: /about/
