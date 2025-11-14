@@ -67,6 +67,18 @@ Fundamental principles of motion and forces in engineering systems.
 > *"Faranak was an absolutely phenomenal TA for this class: She did not stop talking, and everything she said was useful. She provided good explanations of student questions and what was on the homework, and for the two times I needed her to look at my code, she thoroughly dug through my code and was able to explain multiple fixes which improved my code and made it function properly; and with the notes she gave me, I learned quite a bit about how to use Matlab in the process. I seriously appreciate her ability to teach."*  
 > — Student, Introduction to Programming (Summer 2025)
 
+> *"She was very good at explaining the questions we had and the material."*  
+> — Student, Summer 2025
+
+> *"She can explain the questions during sessions well and it is helpful for me to review what I learned during the lecture."*  
+> — Student, 2025
+
+> *"Very clear and useful feedback and explanations on specific questions/problems."*  
+> — Student, Spring 2024
+
+> *"Very helpful TA!"*  
+> — Student, Spring 2024
+
 > *"I just wanted to thank you for your help throughout this quarter. You provided very detailed lectures in the hopes of helping us complete our homework and stayed during office hours many hours past when you needed to. I hope your doctorate goes well and you enjoy the rest of your time at UCSB."*  
 > — Alec Perkins, Student (December 2023)
 
