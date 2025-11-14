@@ -286,10 +286,150 @@ author_profile: true
     </div>
   </div>
   
+  <div class="gallery-item">
+    <img src="/assets/images/cooking/food22.jpg" alt="Cooking photo 22">
+    <div class="gallery-caption">
+      <p>Delicious creation #22</p>
+    </div>
+  </div>
+  
+  <div class="gallery-item">
+    <img src="/assets/images/cooking/food23.jpg" alt="Cooking photo 23">
+    <div class="gallery-caption">
+      <p>Delicious creation #23</p>
+    </div>
+  </div>
+  
+  <div class="gallery-item">
+    <img src="/assets/images/cooking/food24.jpg" alt="Cooking photo 24">
+    <div class="gallery-caption">
+      <p>Delicious creation #24</p>
+    </div>
+  </div>
+  
+  <div class="gallery-item">
+    <img src="/assets/images/cooking/food25.jpg" alt="Cooking photo 25">
+    <div class="gallery-caption">
+      <p>Delicious creation #25</p>
+    </div>
+  </div>
+  
+  <div class="gallery-item">
+    <img src="/assets/images/cooking/food26.jpg" alt="Cooking photo 26">
+    <div class="gallery-caption">
+      <p>Delicious creation #26</p>
+    </div>
+  </div>
+  
+  <div class="gallery-item">
+    <img src="/assets/images/cooking/food27.jpg" alt="Cooking photo 27">
+    <div class="gallery-caption">
+      <p>Delicious creation #27</p>
+    </div>
+  </div>
+  
+  <div class="gallery-item">
+    <img src="/assets/images/cooking/food28.jpg" alt="Cooking photo 28">
+    <div class="gallery-caption">
+      <p>Delicious creation #28</p>
+    </div>
+  </div>
+  
+  <div class="gallery-item">
+    <img src="/assets/images/cooking/food29.jpg" alt="Cooking photo 29">
+    <div class="gallery-caption">
+      <p>Delicious creation #29</p>
+    </div>
+  </div>
+  
+  <div class="gallery-item">
+    <img src="/assets/images/cooking/food30.jpg" alt="Cooking photo 30">
+    <div class="gallery-caption">
+      <p>Delicious creation #30</p>
+    </div>
+  </div>
+  
+  <div class="gallery-item">
+    <img src="/assets/images/cooking/food31.jpg" alt="Cooking photo 31">
+    <div class="gallery-caption">
+      <p>Delicious creation #31</p>
+    </div>
+  </div>
+  
+  <div class="gallery-item">
+    <img src="/assets/images/cooking/food32.jpg" alt="Cooking photo 32">
+    <div class="gallery-caption">
+      <p>Delicious creation #32</p>
+    </div>
+  </div>
+  
+  <div class="gallery-item">
+    <img src="/assets/images/cooking/food33.jpg" alt="Cooking photo 33">
+    <div class="gallery-caption">
+      <p>Delicious creation #33</p>
+    </div>
+  </div>
+  
+  <div class="gallery-item">
+    <img src="/assets/images/cooking/food34.jpg" alt="Cooking photo 34">
+    <div class="gallery-caption">
+      <p>Delicious creation #34</p>
+    </div>
+  </div>
+  
+  <div class="gallery-item">
+    <img src="/assets/images/cooking/food35.jpg" alt="Cooking photo 35">
+    <div class="gallery-caption">
+      <p>Delicious creation #35</p>
+    </div>
+  </div>
+  
+  <div class="gallery-item">
+    <img src="/assets/images/cooking/food36.jpg" alt="Cooking photo 36">
+    <div class="gallery-caption">
+      <p>Delicious creation #36</p>
+    </div>
+  </div>
+  
+  <div class="gallery-item">
+    <img src="/assets/images/cooking/food37.jpg" alt="Cooking photo 37">
+    <div class="gallery-caption">
+      <p>Delicious creation #37</p>
+    </div>
+  </div>
+  
+  <div class="gallery-item">
+    <img src="/assets/images/cooking/food38.jpg" alt="Cooking photo 38">
+    <div class="gallery-caption">
+      <p>Delicious creation #38</p>
+    </div>
+  </div>
+  
+  <div class="gallery-item">
+    <img src="/assets/images/cooking/food39.jpg" alt="Cooking photo 39">
+    <div class="gallery-caption">
+      <p>Delicious creation #39</p>
+    </div>
+  </div>
+  
+  <div class="gallery-item">
+    <img src="/assets/images/cooking/food40.jpg" alt="Cooking photo 40">
+    <div class="gallery-caption">
+      <p>Delicious creation #40</p>
+    </div>
+  </div>
+  
+  <div class="gallery-item">
+    <img src="/assets/images/cooking/food41.jpg" alt="Cooking photo 41">
+    <div class="gallery-caption">
+      <p>Delicious creation #41</p>
+    </div>
+  </div>
+  
 </div>
 
 ---
 
-<!-- *Now go to your Numbers spreadsheet and add captions for each photo! Update the descriptions to match food1.jpg through food21.jpg* -->
+<!-- *Now go to your Numbers spreadsheet and add captions for each photo! Update the descriptions to match food1.jpg through food41.jpg* -->
 
 [← Back to About](/about/)
