@@ -290,6 +290,6 @@ author_profile: true
 
 ---
 
-*Now go to your Numbers spreadsheet and add captions for each photo! Update the descriptions to match food1.jpg through food21.jpg*
+<!-- *Now go to your Numbers spreadsheet and add captions for each photo! Update the descriptions to match food1.jpg through food21.jpg* -->
 
 [← Back to About](/about/)
