@@ -76,6 +76,12 @@ Fundamental principles of motion and forces in engineering systems.
 > *"Very clear and useful feedback and explanations on specific questions/problems."*  
 > — Student, Spring 2024
 
+> *"TA was knowledgeable and often walked through similar homework problems during section for the times I did go, and was very responsive on email."*  
+> — Student, Spring 2024
+
+> *"She seemed nice and helpful when I went."*  
+> — Student, Spring 2024
+
 > *"Very helpful TA!"*  
 > — Student, Spring 2024
 
