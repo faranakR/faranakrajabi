@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: none
 permalink: /goals/
 title: Goals Tracker
 description: Progress tracking and learning journal
