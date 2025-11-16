@@ -364,6 +364,9 @@ nav_order: 7
   <div class="countdown">
     <span id="days-remaining">Loading...</span> days until January 15, 2026
   </div>
+  <div style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.9;">
+    <strong>Keyboard Shortcuts:</strong> ← / → arrows or P / N keys to navigate entries | Home / End for first/last
+  </div>
 </div>
 
 <!-- Stats Dashboard -->
@@ -746,5 +749,63 @@ nav_order: 7
     document.getElementById('filter-mood').value = '';
     displayEntries(entries);
   };
+  
+  // Keyboard navigation
+  let currentEntryIndex = 0;
+  
+  document.addEventListener('keydown', function(e) {
+    // Only trigger if not typing in an input/textarea
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+      return;
+    }
+    
+    const journalEntries = document.querySelectorAll('.journal-entry');
+    
+    if (journalEntries.length === 0) return;
+    
+    // Left arrow or 'p' for previous
+    if (e.key === 'ArrowLeft' || e.key === 'p' || e.key === 'P') {
+      e.preventDefault();
+      currentEntryIndex = Math.max(0, currentEntryIndex - 1);
+      scrollToEntry(journalEntries[currentEntryIndex]);
+    }
+    
+    // Right arrow or 'n' for next
+    if (e.key === 'ArrowRight' || e.key === 'n' || e.key === 'N') {
+      e.preventDefault();
+      currentEntryIndex = Math.min(journalEntries.length - 1, currentEntryIndex + 1);
+      scrollToEntry(journalEntries[currentEntryIndex]);
+    }
+    
+    // Home key - go to first entry
+    if (e.key === 'Home') {
+      e.preventDefault();
+      currentEntryIndex = 0;
+      scrollToEntry(journalEntries[0]);
+    }
+    
+    // End key - go to last entry
+    if (e.key === 'End') {
+      e.preventDefault();
+      currentEntryIndex = journalEntries.length - 1;
+      scrollToEntry(journalEntries[currentEntryIndex]);
+    }
+  });
+  
+  function scrollToEntry(entry) {
+    // Remove previous highlight
+    document.querySelectorAll('.journal-entry').forEach(e => {
+      e.style.borderLeft = '4px solid #667eea';
+      e.style.transform = 'scale(1)';
+    });
+    
+    // Highlight current entry
+    entry.style.borderLeft = '4px solid #dc3545';
+    entry.style.transform = 'scale(1.01)';
+    entry.style.transition = 'all 0.3s ease';
+    
+    // Scroll to entry
+    entry.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
 })();
 </script>
