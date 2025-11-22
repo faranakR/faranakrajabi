@@ -324,6 +324,16 @@ author_profile: true
 }
 </style>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init("M_6AgBlV0CHoFIjLP");
+  })();
+</script>
+
+<div class="invitation-page">
+
+
 <div class="invitation-page">
 
   <!-- Invitation Header -->
@@ -480,7 +490,6 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 function respond(answer) {
-  // Get name from URL instead of input fields
   const fullName = inviteData.name || '';
   const nameParts = fullName.split(' ');
   const firstName = nameParts[0] || '';
@@ -489,6 +498,46 @@ function respond(answer) {
   document.getElementById('rsvpScreen').style.display = 'none';
   
   if (answer === 'yes') {
+    // Format datetime for email
+    const dt = new Date(inviteData.datetime);
+    const formattedDateTime = dt.toLocaleString('en-US', {
+      weekday: 'long',
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true,
+      timeZone: 'America/Los_Angeles'
+    });
+    
+    // Generate Google Calendar link
+    const start = new Date(inviteData.datetime);
+    const mins = parseInt(inviteData.duration) || 30;
+    const end = new Date(start.getTime() + mins * 60000);
+    const fmt = (d) => d.toISOString().replace(/-|:|\.\d+/g, '');
+    const calendarLink = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(inviteData.topic)}&dates=${fmt(start)}/${fmt(end)}&details=Meeting%20with%20Faranak%20Rajabi&location=${encodeURIComponent(inviteData.location)}`;
+    
+    // Send confirmation email to guest
+    const guestEmailParams = {
+      first_name: firstName,
+      guest_email: inviteData.email,
+      topic: inviteData.topic,
+      meeting_datetime: formattedDateTime,
+      duration: inviteData.duration,
+      location: inviteData.location,
+      zoom_link: inviteData.location,
+      calendar_link: calendarLink
+    };
+    
+    emailjs.send('service_3lm4w34', 'template_yhm6ssq', guestEmailParams)
+      .then(function(response) {
+        console.log('Confirmation email sent to guest!', response);
+      }, function(error) {
+        console.error('Failed to send confirmation email:', error);
+      });
+    
+    // Redirect to confirmation page
     const params = new URLSearchParams({
       firstName: firstName,
       lastName: lastName,
@@ -507,4 +556,5 @@ function respond(answer) {
     document.getElementById('maybeScreen').classList.add('show');
   }
 }
+
 </script>
