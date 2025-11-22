@@ -157,6 +157,14 @@ author_profile: true
 }
 </style>
 
+<!-- EmailJS Library -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init("M_6AgBlV0CHoFIjLP");
+  })();
+</script>
+
 <div class="admin-container">
   <div class="admin-header">
     <h1>📧 Create Meeting Invitation</h1>
@@ -229,7 +237,7 @@ author_profile: true
     </div>
 
     <button type="submit" class="submit-btn" id="submitBtn">
-      📨 Generate Invitation Link
+      📨 Send Invitation Email
     </button>
 
     <div class="result-box" id="resultBox"></div>
@@ -265,9 +273,8 @@ document.getElementById('inviteForm').addEventListener('submit', function(e) {
   
   const submitBtn = document.getElementById('submitBtn');
   submitBtn.disabled = true;
-  submitBtn.textContent = '⏳ Generating...';
+  submitBtn.textContent = '📧 Sending Email...';
   
-  // Get form data
   const formData = {
     email: document.getElementById('guestEmail').value,
     name: document.getElementById('guestName').value,
@@ -280,39 +287,48 @@ document.getElementById('inviteForm').addEventListener('submit', function(e) {
     message: document.getElementById('message').value
   };
   
-  // Create datetime string
   const datetime = `${formData.date}T${formData.time}:00`;
   
-  // Generate unique token (in production, this should come from backend)
+  const dt = new Date(datetime);
+  const formattedDateTime = dt.toLocaleString('en-US', {
+    weekday: 'long',
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true,
+    timeZone: 'America/Los_Angeles'
+  });
+  
   const token = generateToken();
   
-  // Create invitation URL
   const inviteUrl = `${window.location.origin}/schedule/?invite=${token}&email=${encodeURIComponent(formData.email)}&name=${encodeURIComponent(formData.name)}&datetime=${datetime}&duration=${encodeURIComponent(formData.duration)}&topic=${encodeURIComponent(formData.topic)}&location=${encodeURIComponent(formData.location || formData.locationType)}`;
   
-  // In production, send this to your backend:
-  // fetch('/api/send-invitation', {
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body: JSON.stringify({
-  //     ...formData,
-  //     token: token,
-  //     inviteUrl: inviteUrl
-  //   })
-  // })
-  // .then(res => res.json())
-  // .then(data => {
-  //   showSuccess(inviteUrl);
-  // })
-  // .catch(error => {
-  //   showError(error.message);
-  // });
+  const emailParams = {
+    guest_name: formData.name || 'there',
+    guest_email: formData.email,
+    topic: formData.topic,
+    meeting_datetime: formattedDateTime,
+    duration: formData.duration,
+    location: formData.location || formData.locationType,
+    message: formData.message || '',
+    invitation_link: inviteUrl,
+    to_email: formData.email
+  };
   
-  // For now, just show the link
-  setTimeout(() => {
-    showSuccess(inviteUrl, formData);
-    submitBtn.disabled = false;
-    submitBtn.textContent = '📨 Generate Invitation Link';
-  }, 1000);
+  emailjs.send('service_3lm4w34', 'template_k7d8bxs', emailParams)
+    .then(function(response) {
+      console.log('Email sent successfully!', response);
+      showSuccess(inviteUrl, formData);
+      submitBtn.disabled = false;
+      submitBtn.textContent = '📨 Send Invitation Email';
+    }, function(error) {
+      console.error('Email failed to send:', error);
+      showError('Failed to send email: ' + error.text);
+      submitBtn.disabled = false;
+      submitBtn.textContent = '📨 Send Invitation Email';
+    });
 });
 
 function generateToken() {
@@ -326,33 +342,12 @@ function showSuccess(url, data) {
   resultBox.style.display = 'block';
   
   resultBox.innerHTML = `
-    <strong>✓ Invitation Link Generated!</strong>
-    <p style="margin: 12px 0 8px 0; font-size: 13px;">Copy and send this link to ${data.email}:</p>
+    <strong>✓ Invitation Email Sent!</strong>
+    <p style="margin: 12px 0 8px 0; font-size: 13px;">Professional invitation sent to ${data.email}</p>
     <div class="invitation-link">${url}</div>
     <button class="copy-btn" onclick="copyToClipboard('${url}')">📋 Copy Link</button>
-    
-    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #10b981;">
-      <strong>📧 Email Template:</strong>
-      <div style="margin-top: 12px; padding: 12px; background: white; border: 1px solid #d1d5db; border-radius: 6px; font-size: 13px; line-height: 1.6;">
-        Hi ${data.name || 'there'},<br><br>
-        I'd like to invite you to a meeting:<br><br>
-        <strong>Topic:</strong> ${data.topic}<br>
-        <strong>Date/Time:</strong> ${formatDateTime(data.date, data.time)}<br>
-        <strong>Duration:</strong> ${data.duration}<br>
-        <strong>Location:</strong> ${data.location || data.locationType}<br><br>
-        ${data.message ? data.message + '<br><br>' : ''}
-        Please confirm your attendance by clicking here:<br>
-        <a href="${url}">${url}</a><br><br>
-        Best regards,<br>
-        Faranak Rajabi
-      </div>
-      <button class="copy-btn" onclick="copyEmailTemplate('${data.name || ''}', '${data.topic}', '${data.date}', '${data.time}', '${data.duration}', '${data.location || data.locationType}', '${data.message}', '${url}')" style="margin-top: 8px;">
-        📋 Copy Email
-      </button>
-    </div>
   `;
   
-  // Scroll to result
   resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
@@ -363,46 +358,11 @@ function showError(message) {
   resultBox.innerHTML = `<strong>✗ Error:</strong> ${message}`;
 }
 
-function formatDateTime(date, time) {
-  const d = new Date(`${date}T${time}`);
-  return d.toLocaleString('en-US', {
-    weekday: 'long',
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric',
-    hour: 'numeric',
-    minute: '2-digit',
-    hour12: true
-  });
-}
-
 function copyToClipboard(text) {
   navigator.clipboard.writeText(text).then(() => {
     alert('✓ Link copied to clipboard!');
   });
 }
 
-function copyEmailTemplate(name, topic, date, time, duration, location, message, url) {
-  const template = `Hi ${name || 'there'},
-
-I'd like to invite you to a meeting:
-
-Topic: ${topic}
-Date/Time: ${formatDateTime(date, time)}
-Duration: ${duration}
-Location: ${location}
-
-${message ? message + '\n\n' : ''}Please confirm your attendance by clicking here:
-${url}
-
-Best regards,
-Faranak Rajabi`;
-
-  navigator.clipboard.writeText(template).then(() => {
-    alert('✓ Email template copied to clipboard!');
-  });
-}
-
-// Set default date to today
 document.getElementById('meetingDate').valueAsDate = new Date();
 </script>
