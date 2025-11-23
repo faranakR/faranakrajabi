@@ -537,25 +537,15 @@ function respond(answer) {
         console.error('Failed to send confirmation email:', error);
       });
 
-    emailjs.send('service_3lm4w34', 'template_yhm6ssq', guestEmailParams)
-  .then(function(response) {
-    console.log('Confirmation email sent to guest!', response);
-  }, function(error) {
-    console.error('Failed to send confirmation email:', error);
-  });
-
-    // ADD NTFY NOTIFICATION HERE ⬇️
+    // Send push notification to admin
     fetch('https://ntfy.sh/faranak-meetings', {
-    method: 'POST',
-    body: `✅ ${firstName} ${lastName} accepted your meeting!
-    📅 ${inviteData.topic}
-    🕐 ${formattedDateTime}
-    📧 ${inviteData.email}`
+      method: 'POST',
+      body: `✅ ${firstName} ${lastName} accepted your meeting!
+📅 ${inviteData.topic}
+🕐 ${formattedDateTime}
+📧 ${inviteData.email}`
     }).catch(error => console.error('Notification failed:', error));
 
-    // Redirect to confirmation page
-    const params = new URLSearchParams({  
-    
     // Redirect to confirmation page
     const params = new URLSearchParams({
       firstName: firstName,
