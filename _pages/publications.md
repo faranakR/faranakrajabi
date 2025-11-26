@@ -12,8 +12,8 @@ title: "Publications"
 
 **CASL-HJX: A Comprehensive Guide to Solving Deterministic and Stochastic Hamilton-Jacobi Equations**  
 **F. Rajabi**, J. Fingerman, A. Wang, J. Moehlis, F. Gibou  
-*arXiv preprint* (2025)  
-[[Preprint](https://arxiv.org/abs/2505.11527)] [[Code](https://github.com/UCSB-CASL/CASL-HJX)]
+*Computer Physics Communications* (2025)  
+[[Paper](https://www.sciencedirect.com/science/article/pii/S0010465525004424)] [[Code](https://github.com/UCSB-CASL/CASL-HJX)]
 
 **Magnitude-Constrained Optimal Chaotic Desynchronization of Neural Populations**  
 M. Zimet, **F. Rajabi**, J. Moehlis  
