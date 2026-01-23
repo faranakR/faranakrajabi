@@ -15,20 +15,27 @@ Prior to my PhD, I obtained my BS in Aerospace Engineering from Sharif Universit
 
 Please feel free to reach out if our work or interests align! **[Schedule a meeting](https://calendar.google.com/calendar/u/0/appointments/AcZssZ3_BzygdfmAjpLYVsIno5k5evzktA6aiSIdjgs=)** or **[email me](mailto:faranakrajabi@ucsb.edu)**.
 
+
 ## For Iran 🖤
 
-These days, my heart is with my honorable compatriots, the mourning families of nearly 20,000 lives lost in the recent protests. Every single family is grieving for their loved ones.
+<div style="display: flex; align-items: flex-start; gap: 30px; flex-wrap: wrap;">
+<div style="flex: 1; min-width: 300px;">
 
-The Supreme Leader rules over an ocean of blood. This is the largest massacre in modern Iranian history, and one of the deadliest crackdowns against a people fighting for freedom in the 21st century.
+<p>These days, my heart is with my honorable compatriots, the mourning families of <strong>nearly 20,000 lives lost</strong> in the recent protests. Every single family is grieving for their loved ones.</p>
 
-An end to the Islamic Republic. A free, secular, democratic Iran. Freedom after 45 years of oppression.
+<p>The Supreme Leader rules over an ocean of blood. This is the <strong>largest massacre in modern Iranian history</strong>, and one of the deadliest crackdowns against a people fighting for freedom in the 21st century.</p>
 
-*جاوید شاه*
+<p>An end to the Islamic Republic. A free, secular, democratic Iran. Freedom after 47 (or maybe 1400!) years of oppression.</p>
 
-![Faranak at protest](/assets/images/ucsb_protest.jpg)
+<p><em>جاوید شاه</em></p>
 
-**#IranRevolution #FreeIran #RezaPahlavi #JavidShah #SecularDemocracy #EndIslamicRepublic #IranProtests2025 #محمدرضا_پهلوی #جاوید_شاه #ایران**
+<p><strong>#IranRevolution #FreeIran #RezaPahlavi #JavidShah #SecularDemocracy #EndIslamicRepublic #IranProtests2025 #محمدرضا_پهلوی #جاوید_شاه #ایران</strong></p>
 
+</div>
+<div style="flex-shrink: 0;">
+<img src="/assets/images/ucsb_protest.jpg" alt="Faranak at protest" width="200">
+</div>
+</div>
 
 
 ### On the Job Market 🎯
