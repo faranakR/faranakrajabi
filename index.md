@@ -50,6 +50,8 @@ I'm actively seeking positions in computational science, scientific software dev
 
 ## 📣 News
 
+- **[February 2026]**: Excited to share that I'll be joining <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" height="20" style="vertical-align: middle;"> as a Software Engineering Intern this summer in Sunnyvale, CA! 🎉 If you're in the Sunnyvale area and want to meet up, or if you know of a good place to rent nearby, please **[reach out](mailto:faranakrajabi@ucsb.edu)**!
+
 - **[November 2025]**: Our paper **CASL-HJX: A Comprehensive Guide to Solving Deterministic and Stochastic Hamilton-Jacobi Equations** was published in Computer Physics Communications! [[Paper](https://www.sciencedirect.com/journal/computer-physics-communications)] [[Code](https://github.com/UCSB-CASL/CASL-HJX)]
   
 - **[October 2025]**: Our paper **Magnitude-Constrained Optimal Chaotic Desynchronization of Neural Populations** was published in Frontiers in Network Physiology! [[Paper](https://www.frontiersin.org/journals/network-physiology)]
