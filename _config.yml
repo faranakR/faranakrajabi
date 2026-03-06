@@ -33,6 +33,11 @@ author:
 include:
   - _pages
 
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+    
 # Plugins
 plugins:
   - jekyll-paginate
