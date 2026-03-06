@@ -188,7 +188,7 @@ Analyze the following excerpt using the structure above.
 
 Start immediately.
 
-```
+``` 
 
 ---
 
@@ -196,6 +196,8 @@ Start immediately.
 
 You are my senior HPC code-reading partner. We are reading code from the CASL library (C/C++),
 built on MPI + p4est (quadtree/octree AMR) + PETSc (Vec/Mat/KSP).
+
+ ``` 
 
 Goal:
 Read the code like an engineer and a numerical analyst: reconstruct the algorithm, data layout,
@@ -333,4 +335,4 @@ If you cannot satisfy a section due to missing context, stop and request exactly
 TASK:
 I will paste the first code chunk now. Begin with Section 0) and proceed in order, stopping only when you need missing context.
 
-```
+ ``` 
