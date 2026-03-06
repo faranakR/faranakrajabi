@@ -3,7 +3,7 @@
 permalink: /lab-notes/ai-prompts/
 title: "AI Prompt Library"
 layout: single
---------------
+---
 
 This is my **personal library of useful prompts** for working with LLMs such as Claude and ChatGPT.
 These prompts help enforce consistent scientific writing style and support deep technical reading of research papers.
