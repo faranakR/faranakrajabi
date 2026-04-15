@@ -1,0 +1,1286 @@
+---
+layout: null
+permalink: /birthday/
+sitemap: false
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barnamz · Faranak turns 28</title>
+<meta name="description" content="Barnamz at the Depression after Depression during the Ceasefire — Faranak's 28th birthday weekend. April 17-19, 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Italiana&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f5ecd9;
+    --cream-dark: #ead8b8;
+    --wine: #5a141a;
+    --wine-light: #8b2429;
+    --gold: #b8935a;
+    --gold-light: #d4a968;
+    --ink: #2a1410;
+    --ink-soft: #4a2a24;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Cormorant Garamond', serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Grain overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    z-index: 100;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 40px;
+    background: linear-gradient(180deg, var(--wine) 0%, var(--wine-light) 100%);
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(184, 147, 90, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 80%, rgba(184, 147, 90, 0.1) 0%, transparent 50%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeUp 1.2s ease-out;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-flag {
+    display: flex;
+    width: 280px;
+    height: 4px;
+    margin: 0 auto 40px;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+  .hero-flag div { flex: 1; }
+  .hero-flag div:nth-child(1) { background: #239f40; }
+  .hero-flag div:nth-child(2) { background: var(--cream); }
+  .hero-flag div:nth-child(3) { background: #da0000; }
+
+  .hero-overline {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 30px;
+    font-weight: 500;
+  }
+
+  .hero h1 {
+    font-family: 'Italiana', serif;
+    font-size: clamp(48px, 9vw, 110px);
+    font-weight: 400;
+    line-height: 0.95;
+    color: var(--cream);
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+  }
+
+  .hero h1 .and {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.55em;
+    color: var(--gold-light);
+    font-weight: 300;
+    display: block;
+    margin: 8px 0;
+  }
+
+  .hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(18px, 2.4vw, 26px);
+    font-weight: 400;
+    color: var(--cream);
+    max-width: 720px;
+    margin: 0 auto 30px;
+    line-height: 1.5;
+    opacity: 0.95;
+  }
+
+  .hero-callout {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(15px, 1.8vw, 19px);
+    font-style: italic;
+    color: var(--gold-light);
+    max-width: 640px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+    padding: 15px 30px;
+    border-top: 1px solid rgba(212, 169, 104, 0.4);
+    border-bottom: 1px solid rgba(212, 169, 104, 0.4);
+  }
+
+  .hero-dates {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+    padding: 18px 40px;
+    border-top: 1px solid var(--gold-light);
+    border-bottom: 1px solid var(--gold-light);
+    margin-top: 10px;
+  }
+
+  .hero-date-item {
+    font-family: 'Italiana', serif;
+    font-size: 18px;
+    color: var(--cream);
+    letter-spacing: 2px;
+  }
+
+  .hero-date-item span {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--gold-light);
+    margin-top: 4px;
+    font-weight: 500;
+  }
+
+  .hero-dot {
+    color: var(--gold-light);
+    font-size: 20px;
+  }
+
+  /* BIRTHDAY GIRL PHOTO CIRCLE */
+  .hero-photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin: 50px auto 20px;
+    border: 3px solid var(--gold-light);
+    padding: 6px;
+    background: var(--wine);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4), 0 0 60px rgba(212, 169, 104, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-photo-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--wine-light) 0%, var(--wine) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Italiana', serif;
+    font-size: 90px;
+    color: var(--gold-light);
+    overflow: hidden;
+    /* To add your photo, replace this with: background-image: url('/assets/images/birthday/faranak.jpg'); background-size: cover; background-position: center; */
+  }
+
+  .hero-photo-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .hero-age-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-top: 12px;
+    font-weight: 500;
+  }
+
+  .hero-age-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--gold-light);
+    opacity: 0.8;
+    margin-top: 6px;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    animation: bob 2s ease-in-out infinite;
+  }
+
+  @keyframes bob {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, 8px); }
+  }
+
+  /* ============ SECTION BASE ============ */
+  section {
+    padding: 120px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .section-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .section-title {
+    font-family: 'Italiana', serif;
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 400;
+    text-align: center;
+    color: var(--wine);
+    margin-bottom: 50px;
+    line-height: 1;
+  }
+
+  .section-title em {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 40px 0;
+    color: var(--gold);
+  }
+
+  .ornament::before, .ornament::after {
+    content: '';
+    width: 80px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+
+  .ornament-symbol {
+    font-size: 14px;
+    letter-spacing: 8px;
+  }
+
+  /* ============ INVITATION ============ */
+  .invitation {
+    background: var(--cream);
+    text-align: center;
+  }
+
+  .invitation-body {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    line-height: 1.8;
+    color: var(--ink-soft);
+    max-width: 680px;
+    margin: 0 auto;
+    font-weight: 400;
+  }
+
+  .invitation-body strong {
+    font-weight: 600;
+    color: var(--wine);
+  }
+
+  .invitation-body em {
+    font-style: italic;
+    color: var(--wine-light);
+  }
+
+  .invitation-decree {
+    display: inline-block;
+    margin: 30px 0 10px;
+    padding: 15px 0;
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+    font-family: 'Italiana', serif;
+    font-size: 22px;
+    color: var(--wine);
+    letter-spacing: 3px;
+  }
+
+  .invitation-decree-sub {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--gold);
+    letter-spacing: 0;
+    text-transform: none;
+    margin-top: 15px;
+  }
+
+  .callout-note {
+    display: block;
+    max-width: 620px;
+    margin: 20px auto 0;
+    padding: 15px 25px;
+    background: rgba(184, 36, 41, 0.06);
+    border-left: 3px solid var(--wine-light);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--wine);
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  .callout-note strong {
+    font-style: normal;
+    color: var(--wine);
+    font-weight: 600;
+  }
+
+  /* ============ DETAILS CARDS ============ */
+  .details {
+    background: var(--cream-dark);
+  }
+
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .detail-card {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 2px solid var(--gold);
+    position: relative;
+  }
+
+  .detail-card-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .detail-card-main {
+    font-family: 'Italiana', serif;
+    font-size: 28px;
+    color: var(--wine);
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .detail-card-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink-soft);
+  }
+
+  .detail-card-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--wine);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 2px;
+    font-weight: 500;
+  }
+
+  .detail-card-link:hover {
+    color: var(--wine-light);
+  }
+
+  /* ============ GUESTS ============ */
+  .guests {
+    background: var(--cream);
+  }
+
+  .guests-intro {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 19px;
+    color: var(--ink-soft);
+    max-width: 720px;
+    margin: 0 auto 60px;
+    line-height: 1.65;
+  }
+
+  .guest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 40px;
+    max-width: 950px;
+    margin: 0 auto;
+  }
+
+  .guest {
+    text-align: center;
+    padding: 0 10px;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .guest:hover {
+    transform: translateY(-4px);
+  }
+
+  .guest-photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 0 auto 18px;
+    border: 2px solid var(--gold);
+    padding: 4px;
+    background: var(--cream-dark);
+    box-shadow: 0 6px 20px rgba(90, 20, 26, 0.15);
+    position: relative;
+  }
+
+  .guest-photo-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--cream-dark) 0%, #e0caa0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Italiana', serif;
+    font-size: 48px;
+    color: var(--wine);
+    overflow: hidden;
+    /* To add a photo, replace with: background-image: url('/assets/images/birthday/ryan.jpg'); background-size: cover; background-position: center; */
+  }
+
+  .guest-photo-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .guest-name {
+    font-family: 'Italiana', serif;
+    font-size: 24px;
+    color: var(--wine);
+    margin-bottom: 6px;
+    line-height: 1.1;
+  }
+
+  .guest-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 12px;
+    min-height: 22px;
+  }
+
+  .guest-blurb {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .guest.birthday-girl {
+    grid-column: 1 / -1;
+    padding: 45px 20px;
+    background: linear-gradient(180deg, transparent 0%, rgba(184, 147, 90, 0.15) 50%, transparent 100%);
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+    margin-bottom: 25px;
+  }
+
+  .birthday-girl .guest-photo {
+    width: 180px;
+    height: 180px;
+    border-width: 3px;
+  }
+
+  .birthday-girl .guest-photo-inner {
+    font-size: 70px;
+  }
+
+  .birthday-girl .guest-name {
+    font-size: 42px;
+    color: var(--wine);
+  }
+
+  .birthday-girl .guest-title {
+    color: var(--wine-light);
+    letter-spacing: 4px;
+    font-size: 10px;
+  }
+
+  .birthday-girl .guest-blurb {
+    font-size: 17px;
+    max-width: 560px;
+  }
+
+  /* ============ MENU ============ */
+  .menu {
+    background: var(--wine);
+    color: var(--cream);
+  }
+
+  .menu .section-label { color: var(--gold-light); }
+  .menu .section-title { color: var(--cream); }
+  .menu .section-title em { color: var(--gold-light); }
+
+  .menu-intro {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 19px;
+    color: var(--gold-light);
+    max-width: 680px;
+    margin: 0 auto 60px;
+    line-height: 1.65;
+  }
+
+  .menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .menu-night {
+    text-align: center;
+  }
+
+  .menu-night-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .menu-night-title {
+    font-family: 'Italiana', serif;
+    font-size: 32px;
+    color: var(--cream);
+    margin-bottom: 6px;
+  }
+
+  .menu-night-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--gold-light);
+    margin-bottom: 30px;
+  }
+
+  .menu-divider-line {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 0 auto 25px;
+    opacity: 0.5;
+  }
+
+  .menu-course {
+    margin-bottom: 22px;
+  }
+
+  .course-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+
+  .course-item {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--cream);
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  .course-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    color: var(--gold-light);
+    font-style: italic;
+    margin-top: 3px;
+    opacity: 0.8;
+  }
+
+  /* ============ DRESS CODE ============ */
+  .dress {
+    background: var(--cream);
+  }
+
+  .dress-content {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .dress-swatches {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0 50px;
+  }
+
+  .swatch {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15), inset 0 2px 10px rgba(255,255,255,0.1);
+    position: relative;
+  }
+
+  .swatch::after {
+    content: attr(data-color);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+
+  .swatch-black { background: #0a0a0a; }
+  .swatch-navy { background: #0f1f3c; }
+  .swatch-brown { background: #3a1f14; }
+
+  .dress-note {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-style: italic;
+    color: var(--ink-soft);
+    line-height: 1.7;
+    margin-top: 30px;
+  }
+
+  .dress-note strong {
+    color: var(--wine);
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .dress-warning {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 20px 30px;
+    background: rgba(184, 36, 41, 0.08);
+    border-left: 3px solid var(--wine-light);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--wine);
+    text-align: left;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+
+  /* ============ ESSENTIALS ============ */
+  .essentials {
+    background: var(--cream-dark);
+  }
+
+  .essentials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .essentials-col h3 {
+    font-family: 'Italiana', serif;
+    font-size: 26px;
+    color: var(--wine);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--gold);
+  }
+
+  .essentials-col ul {
+    list-style: none;
+  }
+
+  .essentials-col li {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    color: var(--ink-soft);
+    padding: 8px 0 8px 24px;
+    position: relative;
+    line-height: 1.4;
+  }
+
+  .essentials-col li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 12px;
+    top: 12px;
+  }
+
+  .essentials-col li strong { color: var(--wine); }
+
+  /* ============ RSVP / FOOTER ============ */
+  .rsvp {
+    background: var(--wine);
+    color: var(--cream);
+    text-align: center;
+    padding: 100px 40px 60px;
+  }
+
+  .rsvp .section-title {
+    color: var(--cream);
+  }
+
+  .rsvp .section-title em {
+    color: var(--gold-light);
+  }
+
+  .rsvp .section-label {
+    color: var(--gold-light);
+  }
+
+  .rsvp-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--gold-light);
+    max-width: 560px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+  }
+
+  .rsvp-big {
+    font-family: 'Italiana', serif;
+    font-size: 36px;
+    color: var(--cream);
+    margin: 30px 0;
+    letter-spacing: 2px;
+  }
+
+  .footer-signature {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(184, 147, 90, 0.3);
+  }
+
+  .footer-signature-name {
+    font-family: 'Italiana', serif;
+    font-size: 32px;
+    color: var(--cream);
+    margin-bottom: 8px;
+  }
+
+  .footer-signature-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--gold-light);
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 768px) {
+    section { padding: 80px 24px; }
+    .details-grid { grid-template-columns: 1fr; gap: 30px; }
+    .guest-grid { grid-template-columns: 1fr 1fr; gap: 35px 20px; }
+    .menu-grid { grid-template-columns: 1fr; gap: 60px; }
+    .essentials-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-dates { flex-direction: column; gap: 15px; padding: 20px 30px; }
+    .hero-dot { display: none; }
+    .hero-photo { width: 160px; height: 160px; }
+    .birthday-girl .guest-photo { width: 140px; height: 140px; }
+    .birthday-girl .guest-name { font-size: 32px; }
+  }
+
+  @media (max-width: 480px) {
+    .guest-grid { grid-template-columns: 1fr; }
+    .dress-swatches { gap: 15px; }
+    .swatch { width: 60px; height: 60px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- =========== HERO =========== -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-flag"><div></div><div></div><div></div></div>
+    <div class="hero-overline">You Are Cordially Invited To</div>
+    <h1>
+      Barnamz<br>
+      <span class="and">at the depression after depression</span>
+      during the Ceasefire
+    </h1>
+    <p class="hero-tagline">
+      — faranak's edition —<br>
+      your personal unpaid chef
+    </p>
+    <div class="hero-callout">
+      We all know you wanted to party and lash —<br>
+      <em>my birthday was just an excuse for you to name it on me.</em>
+    </div>
+
+    <div class="hero-photo">
+      <div class="hero-photo-inner">
+        <!-- REPLACE: drop your photo at /assets/images/birthday/faranak.jpg and uncomment the img tag -->
+        <!-- <img src="/assets/images/birthday/faranak.jpg" alt="Faranak"> -->
+        28
+      </div>
+    </div>
+    <div class="hero-age-label">Turning Twenty-Eight</div>
+    <div class="hero-age-sub">2 more years until I'm 30 and have to start looking for a husband among the 18–24 year olds 💀</div>
+
+    <div class="hero-dates" style="margin-top: 50px;">
+      <div class="hero-date-item">
+        April 17<span>Friday</span>
+      </div>
+      <div class="hero-dot">◆</div>
+      <div class="hero-date-item">
+        April 18<span>Saturday · THE day</span>
+      </div>
+      <div class="hero-dot">◆</div>
+      <div class="hero-date-item">
+        April 19<span>Sunday</span>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll ↓</div>
+</section>
+
+<!-- =========== INVITATION =========== -->
+<section class="invitation">
+  <div class="section-label">The Invitation</div>
+  <h2 class="section-title">Dearly <em>beloved</em></h2>
+
+  <p class="invitation-body">
+    We are gathered in the hills of <strong>Templeton, California</strong> to celebrate the twenty-eighth trip around the sun of <strong>Faranak Rajabi</strong> — Iranian-in-exile, computational scientist, floating girl in banned OPT, no-apparent-future girl, anti-Islamic, anti-male (lol), unpaid chef, and the woman who will be <em>feeding and entertaining you for two nights straight</em>.
+    <br><br>
+    To celebrate: we <strong>lash, party, and play</strong>. As a side quest, we throw a birthday party.
+    <br><br>
+    I also offer <em>makeup services</em> to my girlies, if you trust in the skills I learned from Sadaf Beauty on YouTube.
+  </p>
+
+  <div class="ornament">
+    <span class="ornament-symbol">✦ ✦ ✦</span>
+  </div>
+
+  <p class="invitation-body" style="font-size: 19px;">
+    <strong>Come for the ghormeh sabzi.</strong><br>
+    <strong>Stay for the zereshk polo.</strong><br>
+    <strong>Survive for the Mafia.</strong>
+  </p>
+
+  <div class="invitation-decree">
+    NO GIFTS · JUST SHOW UP DRESSED UP
+    <span class="invitation-decree-sub">(I'm kidding — I prefer cash over unknown objects as my presents 💅)</span>
+  </div>
+</section>
+
+<!-- =========== DETAILS =========== -->
+<section class="details">
+  <div class="section-label">The Particulars</div>
+  <h2 class="section-title">Where &amp; <em>When</em></h2>
+
+  <div class="details-grid">
+    <div class="detail-card">
+      <div class="detail-card-label">The Venue</div>
+      <div class="detail-card-main">Vineyard Retreat</div>
+      <div class="detail-card-sub">Templeton, California<br>Paso Robles wine country</div>
+      <a href="https://www.airbnb.com/rooms/897127955053259397?source_impression_id=p3_1776199672_P3NcPlmk0rhcUL6E" target="_blank" rel="noopener" class="detail-card-link">View on Airbnb →</a>
+    </div>
+    <div class="detail-card">
+      <div class="detail-card-label">The Dates</div>
+      <div class="detail-card-main">April 17 – 19</div>
+      <div class="detail-card-sub">Friday afternoon arrival<br>Sunday morning departure</div>
+    </div>
+    <div class="detail-card">
+      <div class="detail-card-label">The Drive</div>
+      <div class="detail-card-main">~2 hours</div>
+      <div class="detail-card-sub">North on the 101<br>From Santa Barbara</div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== GUESTS =========== -->
+<section class="guests">
+  <div class="section-label">The Assembled</div>
+  <h2 class="section-title">The <em>Guest List</em></h2>
+
+  <p class="guests-intro">
+    Nine humans of varying levels of functionality (and varying levels of likeability to Faranak), gathered in a vineyard to pretend the world is normal for 48 hours. (Of course not — you're all Iranians, your livelihood is tangled to chaos.)
+    <br><br>
+    <strong>If you're invited, you're chosen.</strong> Not everyone gets to show up in my pics. Titles and positions assigned by the chef herself.
+  </p>
+
+  <div class="guest-grid">
+
+    <div class="guest birthday-girl">
+      <div class="guest-photo">
+        <div class="guest-photo-inner">
+          <!-- REPLACE: drop at /assets/images/birthday/faranak.jpg -->
+          <!-- <img src="/assets/images/birthday/faranak.jpg" alt="Faranak"> -->
+          F
+        </div>
+      </div>
+      <div class="guest-name">Faranak Rajabi</div>
+      <div class="guest-title">The Birthday Girl · Head Chef · The Funniest in All</div>
+      <div class="guest-blurb">
+        The female Chandler of your friend group. Your personal entertainer. Turning twenty-eight. Cooking two dinners. Refusing all offers of help in the kitchen but secretly delegating the dishes. Will cry at least once during the Sensorio walk.
+      </div>
+    </div>
+
+    <div class="guest">
+      <div class="guest-photo">
+        <div class="guest-photo-inner">
+          <!-- <img src="/assets/images/birthday/ryan.jpg" alt="Ryan"> -->
+          R
+        </div>
+      </div>
+      <div class="guest-name">Ryan Solgi</div>
+      <div class="guest-title">Keynote Speaker · Future King of Iran</div>
+      <div class="guest-blurb">
+        Faranak's special guest & co-organizer. The one who is on Faranak's nerves 24/7. Head Scientist in Chief. Driving solo. Responsible for midnight philosophical conversations in the hot tub, including why you should forgive cheating in your relationships.
+      </div>
+    </div>
+
+    <div class="guest">
+      <div class="guest-photo">
+        <div class="guest-photo-inner">
+          <!-- <img src="/assets/images/birthday/yeganeh.jpg" alt="Yeganeh"> -->
+          Y
+        </div>
+      </div>
+      <div class="guest-name">Yeganeh Aghamohammadi</div>
+      <div class="guest-title">Chief of Side Dishes (she doesn't know yet)</div>
+      <div class="guest-blurb">
+        The girls' girl. Faranak's right hand. The dressiest dressed among all the girls. Will be assigned all the side dishes without her knowing, and she'll make them beautifully anyway because she's that kind of friend.
+      </div>
+    </div>
+
+    <div class="guest">
+      <div class="guest-photo">
+        <div class="guest-photo-inner">
+          <!-- <img src="/assets/images/birthday/parsa.jpg" alt="Parsa"> -->
+          P
+        </div>
+      </div>
+      <div class="guest-name">Seyyed Parsa Madinei</div>
+      <div class="guest-title">The Menu Judge · Fancy Tehroon Rich Kid</div>
+      <div class="guest-blurb">
+        Faranak's oldest bro in SB — first guy she met in this city. Gym bro. Dr. Mokri fan. Sarcasm and roasting comedy skills unmatched. The one whose approval on the menu and venue Faranak is most stressed about.
+      </div>
+    </div>
+
+    <div class="guest">
+      <div class="guest-photo">
+        <div class="guest-photo-inner">
+          <!-- <img src="/assets/images/birthday/nima.jpg" alt="Nima"> -->
+          N
+        </div>
+      </div>
+      <div class="guest-name">Nima Kelidari</div>
+      <div class="guest-title">Political Consultant on Geopolitics</div>
+      <div class="guest-blurb">
+        Faranak's Mashhadi little bro, driving all the way from LA. Trump's secret consultant (allegedly). Officially vetoed wine tasting as "piremardi." Shopping co-pilot — probably won't help with anything and will be in the hot tub 24/7.
+      </div>
+    </div>
+
+    <div class="guest">
+      <div class="guest-photo">
+        <div class="guest-photo-inner">
+          <!-- <img src="/assets/images/birthday/parvin.jpg" alt="Parvin"> -->
+          P
+        </div>
+      </div>
+      <div class="guest-name">Parvin Fathi</div>
+      <div class="guest-title">Google Fellow · Most Competitive</div>
+      <div class="guest-blurb">
+        My other girl's girl. Part of our triple girlsies-hotties of SB and hoomeh. Faranak predicts she gets drunk the most and takes the board games the most seriously. Also our other Google fellow.
+      </div>
+    </div>
+
+    <div class="guest">
+      <div class="guest-photo">
+        <div class="guest-photo-inner">
+          <!-- <img src="/assets/images/birthday/amirhassan.jpg" alt="Amirhassan"> -->
+          A
+        </div>
+      </div>
+      <div class="guest-name">Amirhassan Karamlou</div>
+      <div class="guest-title">MIT Grad · Quantum Guy · Most Khareji Vibe</div>
+      <div class="guest-blurb">
+        Our genius MIT graduate. The fanciest-dressed guy, with the most khareji vibe. Hopefully soon the person who helps me become his Google fellow. Our quantum guy. Expected to be the best-dressed man of the weekend.
+      </div>
+    </div>
+
+    <div class="guest">
+      <div class="guest-photo">
+        <div class="guest-photo-inner">
+          <!-- <img src="/assets/images/birthday/mahtab.jpg" alt="Mahtab"> -->
+          M
+        </div>
+      </div>
+      <div class="guest-name">Mahtab Joghrati</div>
+      <div class="guest-title">Persian Classy Combo · Ghelyoon Enthusiast</div>
+      <div class="guest-blurb">
+        My other Khorasani fellow. My little girl. Dark hair, green eyes, the glowing one in our party. Cute Persian-American-Mashhadi accent. The one most excited for ghelyoon. Clubby girl by nature — I hope she likes our lash style.
+      </div>
+    </div>
+
+    <div class="guest">
+      <div class="guest-photo">
+        <div class="guest-photo-inner">
+          <!-- <img src="/assets/images/birthday/amirmohammad.jpg" alt="Amirmohammad"> -->
+          A
+        </div>
+      </div>
+      <div class="guest-name">Amirmohammad Haddad</div>
+      <div class="guest-title">Most Eligible Polite Man · TBD</div>
+      <div class="guest-blurb">
+        Probably the most eligible, most polite man of the trip. Let us get to know him more. Riding with Faranak from SB. Likely the first one to start the fire pit on Friday night.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========== MENU =========== -->
+<section class="menu">
+  <div class="section-label">The Feast</div>
+  <h2 class="section-title">Le <em>Menu</em></h2>
+
+  <p class="menu-intro">
+    Two dinners, both Persian, both cooked by the birthday girl. This is her love language. <em>Do not insult it by being late to the table.</em>
+  </p>
+
+  <div class="menu-grid">
+
+    <div class="menu-night">
+      <div class="menu-night-label">Friday Night</div>
+      <div class="menu-night-title">The Arrival</div>
+      <div class="menu-night-subtitle">April 17 · 9:00 PM</div>
+      <div class="menu-divider-line"></div>
+
+      <div class="menu-course">
+        <div class="course-label">The Main</div>
+        <div class="course-item">Ghormeh Sabzi</div>
+        <div class="course-desc">over saffron basmati rice</div>
+      </div>
+
+      <div class="menu-course">
+        <div class="course-label">Alongside</div>
+        <div class="course-item">Mast-o-Khiyar</div>
+        <div class="course-desc">with dried mint & garlic</div>
+      </div>
+
+      <div class="menu-course">
+        <div class="course-label">And</div>
+        <div class="course-item">Salad Shirazi</div>
+        <div class="course-desc">cucumber, tomato, lemon</div>
+      </div>
+
+      <div class="menu-course">
+        <div class="course-label">Of Course</div>
+        <div class="course-item">Sabzi Khordan & Lavash</div>
+        <div class="course-desc">fresh herbs, feta, walnuts</div>
+      </div>
+    </div>
+
+    <div class="menu-night">
+      <div class="menu-night-label">Saturday Night · THE night</div>
+      <div class="menu-night-title">The Birthday Dinner</div>
+      <div class="menu-night-subtitle">April 18 · 9:30 PM</div>
+      <div class="menu-divider-line"></div>
+
+      <div class="menu-course">
+        <div class="course-label">To Begin</div>
+        <div class="course-item">Ash with Kashk-e Bademjan</div>
+        <div class="course-desc">Persian soup & smoked eggplant dip</div>
+      </div>
+
+      <div class="menu-course">
+        <div class="course-label">The Main Event</div>
+        <div class="course-item">Zereshk Polo ba Morgh</div>
+        <div class="course-desc">saffron rice, barberries, chicken</div>
+      </div>
+
+      <div class="menu-course">
+        <div class="course-label">Sides</div>
+        <div class="course-item">Salads · Mast-o-Khiyar · Lavash</div>
+        <div class="course-desc">a proper Persian table</div>
+      </div>
+
+      <div class="menu-course">
+        <div class="course-label">Dessert</div>
+        <div class="course-item">Baqlava Cake & Chai</div>
+        <div class="course-desc">with candles · with toasts · with tears</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========== DRESS CODE =========== -->
+<section class="dress">
+  <div class="section-label">The Dress Code</div>
+  <h2 class="section-title">Wear It <em>Well</em></h2>
+
+  <div class="dress-content">
+    <p class="invitation-body" style="margin-bottom: 10px;">
+      Saturday night is <strong>not</strong> a casual night. Theme: <strong>dark &amp; formal</strong>.
+    </p>
+
+    <div class="dress-swatches">
+      <div class="swatch swatch-black" data-color="Black"></div>
+      <div class="swatch swatch-navy" data-color="Navy"></div>
+      <div class="swatch swatch-brown" data-color="Dark Brown"></div>
+    </div>
+
+    <p class="dress-note">
+      <strong>Girls:</strong> I want to see your Persian baddie side. Bring makeup, blow dryers, brushes, hairspray, heels for the photos, and comfy shoes for the dance floor. (Makeup help available from me on request — Sadaf Beauty certified 💅)
+      <br><br>
+      <strong>Guys:</strong> Please, for the love of God, show up in something that is <em>not</em> a t-shirt and jeans. Not your Vuori shorts with a blouse either. You know who you are.
+    </p>
+
+    <div class="dress-warning">
+      <strong>Public service announcement:</strong> Smoke-free indoors. Ghelyoon on the patio, discreet and low-key. Outdoor quiet hours after 10 PM — we take the party inside.
+    </div>
+  </div>
+</section>
+
+<!-- =========== ESSENTIALS =========== -->
+<section class="essentials">
+  <div class="section-label">Pack Your Bag</div>
+  <h2 class="section-title">The <em>Essentials</em></h2>
+
+  <div class="essentials-grid">
+    <div class="essentials-col">
+      <h3>Must Bring</h3>
+      <ul>
+        <li>Sleep clothes & comfy clothes</li>
+        <li>Swimsuit for the hot tub</li>
+        <li>Personal towel (if you don't trust Airbnb towels)</li>
+        <li>Saturday night formalwear (dark palette)</li>
+        <li>Heels + comfy shoes</li>
+        <li>Makeup, blow dryer, hairspray</li>
+        <li>Toiletries & meds</li>
+        <li>Light jacket — Paso gets chilly at night</li>
+      </ul>
+    </div>
+
+    <div class="essentials-col">
+      <h3>Community Items</h3>
+      <ul>
+        <li><strong>Parsa:</strong> Ghelyoon 🙏</li>
+        <li>Cards / board games (your favorite ones)</li>
+        <li>Loud Bluetooth speaker (anyone who has one)</li>
+        <li>Cash or Venmo for Faranak ✨</li>
+        <li>One bottle of wine per car, minimum</li>
+        <li>Phone chargers — long ones</li>
+        <li>Playlist contributions welcome</li>
+        <li>Your best stories</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- =========== RSVP =========== -->
+<section class="rsvp">
+  <div class="section-label">The Formalities</div>
+  <h2 class="section-title">Please <em>Respond</em></h2>
+
+  <p class="rsvp-text">
+    I know you're coming. This is me confirming you're actually <em>coming</em>. Text me by Wednesday April 15 with your car assignment, arrival time, and anything you can bring for the grocery list.
+  </p>
+
+  <div class="rsvp-big">See you in the vineyard 🍷</div>
+
+  <div class="footer-signature">
+    <div class="footer-signature-name">Faranak</div>
+    <div class="footer-signature-title">
+      Your funniest, street-smartest friend ever — who is always right.
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
