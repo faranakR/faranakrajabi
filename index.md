@@ -45,10 +45,14 @@ I'm actively seeking positions in computational science, scientific software dev
 <!-- ### 🎓 Education
 
 **PhD, Mechanical Engineering** | UC Santa Barbara | 2022 - Dec 2026  
-**MS, Computer Science** | UC Santa Barbara | 2023 - Dec 2025  
+**MS, Computer Science** | UC Santa Barbara | 2023 - May 2026  
 **BS, Aerospace Engineering** | Sharif University of Technology, Iran | 2016 - 2021  -->
 
 ## 📣 News
+
+- **[May 2026]**: Defended my M.S. thesis **Algorithmic Limits in Optimal Control: A Computational and Statistical Study** in Computer Science at UCSB! 🎓 [[Slides](/assets/files/MS_thesis_defense.pdf)]
+
+- **[May 2026]**: Our paper **Solving Advection-Diffusion-Reaction Equations with Robin Boundary Conditions on Piecewise Smooth Interfaces** is now available as a preprint on SSRN! [[Preprint](https://ssrn.com/abstract=6802454)]
 
 - **[February 2026]**: Excited to share that I'll be joining <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" style="height: 20px; display: inline; vertical-align: middle;"> as a Software Engineering Intern this summer in Sunnyvale, CA! 🎉 If you're in the Sunnyvale area and want to meet up, or if you know of a good place to rent nearby, please **[reach out](mailto:faranakrajabi@ucsb.edu)**!
 
