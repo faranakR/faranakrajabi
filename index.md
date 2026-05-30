@@ -50,6 +50,8 @@ I'm actively seeking positions in computational science, scientific software dev
 
 ## 📣 News
 
+- **[May 2026]**: Featured in the *Daily Nexus* alongside other UCSB Iranian graduate students on the indefinite pause of OPT processing - a policy now blocking thousands of international students from post-graduation employment in the U.S. [[Article](https://dailynexus.com/2026-05-28/international-students-post-graduation-employment-authorization-on-pause-indefinitely/)]
+
 - **[May 2026]**: Defended my M.S. thesis **Algorithmic Limits in Optimal Control: A Computational and Statistical Study** in Computer Science at UCSB! 🎓 [[Slides](/assets/files/MS_thesis_defense.pdf)]
 
 - **[May 2026]**: Our paper **Solving Advection-Diffusion-Reaction Equations with Robin Boundary Conditions on Piecewise Smooth Interfaces** is now available as a preprint on SSRN! [[Preprint](https://ssrn.com/abstract=6802454)]
