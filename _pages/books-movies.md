@@ -7,145 +7,50 @@ classes: wide
 ---
 
 <style>
-.media-intro {
-  max-width: 760px;
-  margin: 0 auto 2.4rem;
-  text-align: center;
-}
-.media-intro p {
-  margin-bottom: .6rem;
-  color: #5c6470;
-  font-size: 1.05rem;
-}
-.media-intro .small-note {
-  font-size: .82rem;
-  color: #8a919b;
-}
-.media-section-title {
-  color: #001f3f;
-  margin: 2.5rem 0 1.1rem;
-  padding-bottom: .55rem;
-  border-bottom: 1px solid #e9edf2;
-}
-.movie-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1.35rem;
-  margin: 1.2rem 0 3rem;
-}
-.movie-card {
-  display: block;
-  overflow: hidden;
-  border: 1px solid #e5e9ef;
-  border-radius: 14px;
-  background: #fff;
-  text-decoration: none !important;
-  color: inherit !important;
-  box-shadow: 0 3px 14px rgba(0, 25, 55, .06);
-  transition: transform .18s ease, box-shadow .18s ease;
-}
-.movie-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 9px 24px rgba(0, 25, 55, .12);
-}
-.poster-wrap {
-  position: relative;
-  aspect-ratio: 2 / 3;
-  overflow: hidden;
-  background: linear-gradient(145deg, #0d253f, #2b5876 55%, #4e4376);
-}
-.poster-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.poster-fallback {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1rem;
-  color: white;
-  font-weight: 700;
-  line-height: 1.2;
-  z-index: 0;
-}
-.poster-wrap img { position: relative; z-index: 1; }
-.movie-info {
-  padding: .9rem .95rem 1rem;
-}
-.movie-title {
-  margin: 0;
-  color: #001f3f;
-  font-size: 1rem;
-  line-height: 1.25;
-}
-.movie-year {
-  color: #8a919b;
-  font-weight: 400;
-}
-.watch-date {
-  margin: .45rem 0 0;
-  color: #6c7480;
-  font-size: .79rem;
-  line-height: 1.3;
-}
-.imdb-hint {
-  margin-top: .7rem;
-  color: #9a7b00;
-  font-size: .73rem;
-  font-weight: 600;
-  letter-spacing: .02em;
-}
-.books-placeholder {
-  padding: 1.4rem;
-  border: 1px dashed #ccd3dc;
-  border-radius: 12px;
-  color: #727a85;
-  background: #fafbfc;
-}
-.back-personal { margin-top: 2.5rem; }
-@media (max-width: 520px) {
-  .movie-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
-  .movie-info { padding: .75rem; }
-  .movie-title { font-size: .9rem; }
-}
+.media-intro { max-width: 820px; margin: 0 0 2.5rem; }
+.media-intro p { color:#5f6670; font-size:1rem; }
+.media-section-title { color:#001f3f; margin:2.4rem 0 1.2rem; padding-bottom:.55rem; border-bottom:1px solid #e6e9ed; }
+.movie-list { max-width: 920px; }
+.movie-row { display:grid; grid-template-columns:180px minmax(0,1fr); gap:2rem; padding:1.6rem 0; border-bottom:1px solid #e8ebef; align-items:start; }
+.movie-poster { width:180px; aspect-ratio:2/3; object-fit:cover; border-radius:4px; background:#eef1f4; box-shadow:0 4px 14px rgba(0,0,0,.10); display:block; }
+.movie-copy h3 { margin:.05rem 0 .35rem; color:#001f3f; font-size:1.45rem; }
+.movie-meta { color:#747b84; font-size:.86rem; margin-bottom:.9rem; }
+.movie-rating { font-size:.92rem; font-weight:600; color:#333; margin:.15rem 0 .85rem; }
+.movie-review { color:#454b53; line-height:1.7; margin:0 0 1rem; max-width:650px; }
+.movie-review.empty { color:#969ca4; font-style:italic; }
+.imdb-link { font-size:.84rem; font-weight:600; text-decoration:none !important; }
+.books-placeholder { padding:1.3rem; border:1px dashed #ccd3dc; border-radius:8px; color:#727a85; background:#fafbfc; max-width:920px; }
+@media (max-width:650px) { .movie-row { grid-template-columns:105px minmax(0,1fr); gap:1rem; padding:1.2rem 0; } .movie-poster { width:105px; } .movie-copy h3 { font-size:1.15rem; } .movie-review { font-size:.92rem; } }
 </style>
 
 <div class="media-intro">
-  <p>A record of the stories I spend time with — what I read, what I watch, and eventually what I thought about them.</p>
-  <p class="small-note">Movie dates are the dates I saw them in theaters. Click any movie to open its IMDb page.</p>
+  <p>A personal record of films I watch and books I read — when I found them, how I felt about them, and the ones that stayed with me.</p>
 </div>
 
-<h2 class="media-section-title">🎬 Movies</h2>
-
-<div class="movie-grid">
+<h2 class="media-section-title">Movies</h2>
+<div class="movie-list">
 {% assign movies = site.data.movies | sort: "sort_date" | reverse %}
 {% for movie in movies %}
-  <a class="movie-card" href="https://www.imdb.com/title/{{ movie.imdb_id }}/" target="_blank" rel="noopener noreferrer" aria-label="Open {{ movie.title }} on IMDb">
-    <div class="poster-wrap">
-      <div class="poster-fallback">{{ movie.title }}</div>
-      <img
-        src="https://image.thum.io/get/width/500/crop/750/noanimate/https://www.imdb.com/title/{{ movie.imdb_id }}/"
-        alt="{{ movie.title }} IMDb preview"
-        loading="lazy"
-        onerror="this.style.display='none'">
-    </div>
-    <div class="movie-info">
-      <h3 class="movie-title">{{ movie.title }} <span class="movie-year">({{ movie.year }})</span></h3>
-      <p class="watch-date">Watched {{ movie.watched }}</p>
-      <div class="imdb-hint">IMDb ↗</div>
-    </div>
+<article class="movie-row">
+  <a href="https://www.imdb.com/title/{{ movie.imdb_id }}/" target="_blank" rel="noopener noreferrer">
+    <img class="movie-poster" src="{{ movie.poster }}" alt="Poster for {{ movie.title }}" loading="lazy">
   </a>
+  <div class="movie-copy">
+    <h3>{{ movie.title }} <span style="font-weight:400;color:#8a919b;font-size:.72em;">({{ movie.year }})</span></h3>
+    <div class="movie-meta">Watched {{ movie.watched }}</div>
+    <div class="movie-rating">Rating: {% if movie.rating %}{{ movie.rating }}/5{% else %}— / 5{% endif %}</div>
+    {% if movie.review and movie.review != "" %}
+      <p class="movie-review">{{ movie.review }}</p>
+    {% else %}
+      <p class="movie-review empty">Review to come.</p>
+    {% endif %}
+    <a class="imdb-link" href="https://www.imdb.com/title/{{ movie.imdb_id }}/" target="_blank" rel="noopener noreferrer">View on IMDb ↗</a>
+  </div>
+</article>
 {% endfor %}
 </div>
 
-<h2 class="media-section-title">📚 Books</h2>
-<div class="books-placeholder">
-  Book notes and reviews will live here. We can give them the same visual treatment with covers, dates read, ratings, and your reviews.
-</div>
+<h2 class="media-section-title">Books</h2>
+<div class="books-placeholder">Book notes and reviews will live here next.</div>
 
-<p class="back-personal"><a href="/beyond-research/">← Back to Beyond Research</a></p>
+<p style="margin-top:2.5rem;"><a href="/beyond-research/">← Back to Beyond Research</a></p>

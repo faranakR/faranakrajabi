@@ -1,65 +1,88 @@
-- title: "Michael"
+- title: Michael
   year: 2026
-  watched: "May 31, June 3 & June 5, 2026"
-  sort_date: "2026-06-05"
-  imdb_id: "tt11378946"
-
-- title: "Obsession"
+  watched: May 31, June 3 & June 5, 2026
+  sort_date: '2026-06-05'
+  imdb_id: tt11378946
+  rating: null
+  review: ''
+  poster: https://static.kinoafisha.info/k/movie_posters/800x1200/upload/movie_posters/4/6/3/8369364/789721706374.jpg
+- title: Obsession
   year: 2025
-  watched: "June 2, 2026"
-  sort_date: "2026-06-02"
-  imdb_id: "tt37287335"
-
-- title: "The Housemaid"
+  watched: June 2, 2026
+  sort_date: '2026-06-02'
+  imdb_id: tt37287335
+  rating: null
+  review: ''
+  poster: https://pbs.twimg.com/media/HHqEa1_aoAA451O.jpg
+- title: The Housemaid
   year: 2025
-  watched: "December 18, 2025"
-  sort_date: "2025-12-18"
-  imdb_id: "tt27543632"
-
-- title: "The Conjuring: Last Rites"
+  watched: December 18, 2025
+  sort_date: '2025-12-18'
+  imdb_id: tt27543632
+  rating: null
+  review: ''
+  poster: https://pics.filmaffinity.com/La_asistenta-268473067-large.jpg
+- title: 'The Conjuring: Last Rites'
   year: 2025
-  watched: "September 5, 2025"
-  sort_date: "2025-09-05"
-  imdb_id: "tt22898462"
-
-- title: "Final Destination: Bloodlines"
+  watched: September 5, 2025
+  sort_date: '2025-09-05'
+  imdb_id: tt22898462
+  rating: null
+  review: ''
+  poster: https://image.thum.io/get/width/500/crop/750/noanimate/https://www.imdb.com/title/tt22898462/mediaviewer/
+- title: 'Final Destination: Bloodlines'
   year: 2025
-  watched: "May 20, 2025"
-  sort_date: "2025-05-20"
-  imdb_id: "tt9619824"
-
-- title: "Nosferatu"
+  watched: May 20, 2025
+  sort_date: '2025-05-20'
+  imdb_id: tt9619824
+  rating: null
+  review: ''
+  poster: https://image.thum.io/get/width/500/crop/750/noanimate/https://www.imdb.com/title/tt9619824/mediaviewer/
+- title: Nosferatu
   year: 2024
-  watched: "December 28, 2024"
-  sort_date: "2024-12-28"
-  imdb_id: "tt5040012"
-
-- title: "Mufasa: The Lion King"
+  watched: December 28, 2024
+  sort_date: '2024-12-28'
+  imdb_id: tt5040012
+  rating: null
+  review: ''
+  poster: https://ds.static.rtbf.be/article/image/1239x1920/0/5/b/102bc0c0fcea122cf4020df5d9594a06-1734609597.jpg
+- title: 'Mufasa: The Lion King'
   year: 2024
-  watched: "December 22, 2024"
-  sort_date: "2024-12-22"
-  imdb_id: "tt13186482"
-
-- title: "Gladiator II"
+  watched: December 22, 2024
+  sort_date: '2024-12-22'
+  imdb_id: tt13186482
+  rating: null
+  review: ''
+  poster: https://image.thum.io/get/width/500/crop/750/noanimate/https://www.imdb.com/title/tt13186482/mediaviewer/
+- title: Gladiator II
   year: 2024
-  watched: "November 23, 2024"
-  sort_date: "2024-11-23"
-  imdb_id: "tt9218128"
-
-- title: "Heretic"
+  watched: November 23, 2024
+  sort_date: '2024-11-23'
+  imdb_id: tt9218128
+  rating: null
+  review: ''
+  poster: https://image.thum.io/get/width/500/crop/750/noanimate/https://www.imdb.com/title/tt9218128/mediaviewer/
+- title: Heretic
   year: 2024
-  watched: "November 17, 2024"
-  sort_date: "2024-11-17"
-  imdb_id: "tt28015403"
-
-- title: "We Live in Time"
+  watched: November 17, 2024
+  sort_date: '2024-11-17'
+  imdb_id: tt28015403
+  rating: null
+  review: ''
+  poster: https://image.thum.io/get/width/500/crop/750/noanimate/https://www.imdb.com/title/tt28015403/mediaviewer/
+- title: We Live in Time
   year: 2024
-  watched: "October 27, 2024"
-  sort_date: "2024-10-27"
-  imdb_id: "tt27131358"
-
-- title: "Smile 2"
+  watched: October 27, 2024
+  sort_date: '2024-10-27'
+  imdb_id: tt27131358
+  rating: null
+  review: ''
+  poster: https://image.thum.io/get/width/500/crop/750/noanimate/https://www.imdb.com/title/tt27131358/mediaviewer/
+- title: Smile 2
   year: 2024
-  watched: "October 22, 2024"
-  sort_date: "2024-10-22"
-  imdb_id: "tt29268110"
+  watched: October 22, 2024
+  sort_date: '2024-10-22'
+  imdb_id: tt29268110
+  rating: null
+  review: ''
+  poster: https://image.thum.io/get/width/500/crop/750/noanimate/https://www.imdb.com/title/tt29268110/mediaviewer/
