@@ -35,7 +35,7 @@ I'm actively seeking positions in computational science, scientific software dev
 
 - **[May 2026]**: Our paper **Solving Advection-Diffusion-Reaction Equations with Robin Boundary Conditions on Piecewise Smooth Interfaces** is now available as a preprint on SSRN! [[Preprint](https://ssrn.com/abstract=6802454)]
 
-- **[February 2026]**: Excited to share that I'll be joining Google as a Software Engineering Intern in Sunnyvale, CA! 🎉
+- **[February 2026]**: Excited to share that I'll be joining <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" style="height: 20px; display: inline; vertical-align: middle;"> as a Software Engineering Intern in Sunnyvale, CA! 🎉
 
 - **[November 2025]**: Our paper **CASL-HJX: A Comprehensive Guide to Solving Deterministic and Stochastic Hamilton-Jacobi Equations** was published in Computer Physics Communications! [[Paper](https://www.sciencedirect.com/journal/computer-physics-communications)] [[Code](https://github.com/UCSB-CASL/CASL-HJX)]
 
