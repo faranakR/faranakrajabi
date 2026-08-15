@@ -11,5 +11,7 @@ main:
     url: /leadership/
   - title: "Blog"
     url: /year-archive/
+  - title: "Beyond Research"
+    url: /beyond-research/
   - title: "About"
     url: /about/

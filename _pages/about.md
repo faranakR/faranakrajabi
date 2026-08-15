@@ -82,7 +82,7 @@ If I ever make these for you, it means you’re important:
 
 Cooking is how I show care when words fail.
 
-**[Wanna see some food photos? →](/cooking/)**
+**[Explore cooking and the rest of my life beyond research →](/beyond-research/)**
 
 ---
 
@@ -96,7 +96,7 @@ But let’s be honest, I’m not looking for relaxation.
 Punching, kicking, sweating, pushing myself until my brain shuts up — that’s my therapy.  
 That’s where I feel normal.
 
-(Yes, I will make a boxing page too.)
+*More boxing and movement lives in [Beyond Research →](/beyond-research/)*
 
 ---
 
@@ -147,7 +147,7 @@ My 2025 goals:
 - summit Half Dome  
 - summit Whitney again  
 
-(Hiking photo page coming too.)
+*More hiking and mountain adventures live in [Beyond Research →](/beyond-research/)*
 
 ---
 
@@ -194,6 +194,6 @@ If you want to collaborate, talk PDEs, debug something cursed, go hiking, discus
 
 **Email:** faranakrajabi@ucsb.edu  
 
-And if you want food, hiking, or boxing pics, don’t worry, they’re coming.
+For books, movies, food, hiking, and boxing, wander over to **[Beyond Research →](/beyond-research/)**.
 
 ---
