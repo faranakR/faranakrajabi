@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Big Bear · Sept 7–9</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum:#f7ebe7;        /* page background (soft blush) */
+    --wine:#fff8f4;        /* paper */
+    --wine-2:#f1dcd8;      /* photo placeholder */
+    --blush:#f2d3d0;
+    --cream:#3b1d28;       /* main text (deep plum) */
+    --cream-dim:#8a6a72;   /* muted text */
+    --gold:#b4834a;        /* accent */
+    --rose:#d98b9b;
+    --serif:"Cormorant Garamond", Georgia, serif;
+    --sans:"Jost", system-ui, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{margin:0;background:var(--plum);color:var(--cream);font-family:var(--sans);font-weight:300;font-size:17.5px;line-height:1.6}
+  body{background:radial-gradient(120% 70% at 50% 0%, #fff6f1 0%, var(--plum) 70%)}
+  a{color:var(--gold)}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;margin:0}
+  h1{font-size:clamp(1.9rem,4.2vw,3.2rem);font-style:italic}
+  h2{font-size:clamp(2rem,4.5vw,3.2rem);font-style:italic;margin-bottom:.5rem;color:#7a2e45}
+  h3{font-size:1.5rem;color:var(--gold);margin-bottom:.3rem}
+  p{margin:.4rem 0 .9rem;max-width:62ch}
+  .muted{color:var(--cream-dim)}
+  strong,b{font-weight:500;color:var(--cream)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 1.25rem}
+
+  /* candle glow, single fixed layer */
+  .glow{position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:radial-gradient(40% 30% at 20% 90%, rgba(217,139,155,.16), transparent 70%),
+               radial-gradient(35% 25% at 85% 10%, rgba(180,131,74,.12), transparent 70%)}
+  main,#gate{position:relative;z-index:1}
+
+  /* ------- Gate ------- */
+  #gate{min-height:100svh;display:grid;place-items:center;text-align:center;padding:2rem 1.25rem}
+  #gate .kicker{font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--rose);margin-bottom:1rem}
+  #gate p.lead{margin:1.4rem auto 2rem;font-size:1.1rem;max-width:44ch}
+  .choices{display:flex;gap:1rem;justify-content:center;align-items:center;flex-wrap:wrap;min-height:64px}
+  .btn{font:inherit;font-weight:500;letter-spacing:.02em;border-radius:999px;padding:.95rem 1.9rem;cursor:pointer;border:1.5px solid transparent;transition:transform .12s ease}
+  .btn:focus-visible{outline:2px solid var(--cream);outline-offset:3px}
+  .btn.yes{background:#7a2e45;color:#fff}
+  .btn.no{background:transparent;color:var(--cream);border-color:var(--rose)}
+  .btn.no.fleeing{position:fixed;z-index:50;transition:left .18s ease,top .18s ease}
+  .no-note{font-size:.95rem;color:var(--cream-dim);min-height:1.5em;margin-top:.8rem;font-style:italic;font-family:var(--serif);font-size:1.15rem}
+  .stare{display:flex;gap:1.2rem;justify-content:center;margin:0 auto 1.6rem}
+  .me{width:min(200px,38vw);height:min(200px,38vw);border-radius:50%;background:var(--wine-2) center/cover no-repeat;border:3px solid var(--gold);box-shadow:0 10px 30px rgba(122,46,69,.18)}
+  .heart{display:block;margin:0 auto 1.4rem;width:46px;height:46px;color:var(--rose)}
+
+  /* ------- Inside ------- */
+  main{display:none}
+  main.open{display:block;animation:rise .7s ease both}
+  @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  @media(prefers-reduced-motion:reduce){main.open{animation:none}.btn.no.fleeing{transition:none}}
+
+  /* title page */
+  #title{min-height:100svh;display:grid;align-content:center;text-align:center;padding:3rem 1.25rem 4rem}
+  .us{width:min(86vw,560px,50svh);aspect-ratio:4/5;margin:0 auto 2rem;border:1px solid var(--gold);padding:12px;background:var(--wine);box-shadow:0 12px 40px rgba(122,46,69,.12)}
+  .us .img{width:100%;height:100%;background:var(--wine-2) url("us.jpg") center/cover no-repeat;display:grid;place-items:center}
+  .us .img span{font-family:var(--serif);font-style:italic;color:var(--cream-dim);padding:1rem}
+  #title h1{font-size:clamp(2.4rem,6vw,4.4rem)}
+  .grid4{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:min(90vw,620px,62svh);margin:0 auto 2rem;padding:10px;border:1px solid var(--gold);background:var(--wine);box-shadow:0 12px 40px rgba(122,46,69,.12)}
+  .grid4 figure{margin:0;aspect-ratio:1/1;background:var(--wine-2) center/cover no-repeat;position:relative;cursor:pointer;transition:transform .15s ease}
+  .grid4 figure:active{transform:scale(.97)}
+  .grid4 figcaption{position:absolute;left:0;right:0;bottom:0;padding:.4rem .6rem;font-family:var(--serif);font-style:italic;color:#fff;background:linear-gradient(transparent,rgba(59,29,40,.7));opacity:0;transition:opacity .2s}
+  .grid4 figure:hover figcaption,.grid4 figure.show figcaption{opacity:1}
+  #title .dates{font-family:var(--serif);font-size:1.4rem;color:var(--gold);margin-top:.6rem}
+  #title .scroll{margin-top:2.5rem;color:var(--cream-dim);font-size:.9rem}
+
+  /* section rhythm */
+  section.block{padding:4.5rem 0 1rem}
+  section.block + section.block{border-top:1px solid rgba(180,131,74,.3)}
+  .intro{margin-bottom:2rem}
+
+  /* timeline */
+  .day{display:grid;grid-template-columns:1fr;gap:1rem;margin:2.2rem 0}
+  @media(min-width:720px){.day{grid-template-columns:180px 1fr;gap:2rem}}
+  .day-head .date{font-family:var(--serif);font-size:2.1rem;line-height:1;font-style:italic}
+  .day-head .wx{margin-top:.5rem;color:var(--cream-dim);font-size:.93rem}
+  .slot{display:grid;grid-template-columns:96px 1fr;gap:.8rem;padding:.55rem 0;border-bottom:1px dotted rgba(180,131,74,.3)}
+  .slot time{color:var(--gold);font-weight:500;font-size:.95rem;padding-top:.1rem}
+  .slot .what{font-weight:500;color:var(--cream)}
+  .slot .how{color:var(--cream-dim);font-size:.96rem}
+  .flag{display:inline-block;background:var(--rose);color:#fff;font-size:.75rem;font-weight:500;padding:.1rem .5rem;border-radius:4px;margin-left:.4rem;vertical-align:middle}
+
+  /* polaroids */
+  .polaroids{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
+  @media(min-width:720px){.polaroids{grid-template-columns:repeat(4,1fr)}}
+  .pol{perspective:900px;cursor:pointer;aspect-ratio:4/5}
+  .pol:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+  .pol .inner{position:relative;width:100%;height:100%;transition:transform .55s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d}
+  .pol.flipped .inner{transform:rotateY(180deg)}
+  .pol .front,.pol .back{position:absolute;inset:0;backface-visibility:hidden;border:10px solid var(--wine);box-shadow:0 8px 24px rgba(122,46,69,.14)}
+  .pol .front{background:var(--wine-2) center/cover no-repeat}
+  .pol .back{transform:rotateY(180deg);background:var(--wine);display:grid;place-items:center;text-align:center;padding:1rem}
+  .pol .back p{font-family:var(--serif);font-style:italic;font-size:1.25rem;line-height:1.3;margin:0;color:#7a2e45}
+  .pol:nth-child(odd) .inner{transform:rotate(-2deg)}.pol:nth-child(even) .inner{transform:rotate(2deg)}
+  .pol.flipped:nth-child(odd) .inner{transform:rotate(-2deg) rotateY(180deg)}.pol.flipped:nth-child(even) .inner{transform:rotate(2deg) rotateY(180deg)}
+  @media(prefers-reduced-motion:reduce){.pol .inner{transition:none}}
+
+  /* cards for food / games / lists */
+  .grid{display:grid;gap:1.4rem}
+  @media(min-width:720px){.grid.two{grid-template-columns:1fr 1fr}}
+  .card{background:var(--wine);border:1px solid rgba(180,131,74,.3);padding:1.4rem 1.5rem;box-shadow:0 6px 24px rgba(122,46,69,.06)}
+  .card ul,.card ol{margin:.3rem 0 0;padding-left:1.1rem}
+  .card li{margin:.35rem 0}
+  .pic{width:100%;height:auto;max-height:150px;margin:0 0 1rem;display:block}
+  .list{list-style:none;margin:0;padding:0}
+  .list li{padding:.7rem 0;border-bottom:1px dotted rgba(180,131,74,.3)}
+  .list li b{display:block;font-weight:500}
+  .list li b a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(180,131,74,.5)}
+  .list li span{color:var(--cream-dim);font-size:.95rem}
+
+  /* quiz */
+  .q{padding:1.4rem 0;border-bottom:1px solid rgba(180,131,74,.25)}
+  .q .meta{display:flex;gap:.7rem;align-items:center;margin-bottom:.5rem;font-size:.85rem;color:var(--cream-dim)}
+  .lvl{display:inline-flex;gap:3px}
+  .lvl i{width:9px;height:9px;border-radius:50%;background:rgba(180,131,74,.3)}
+  .lvl i.on{background:var(--gold)}
+  .q .stem{font-family:var(--serif);font-size:1.45rem;line-height:1.25;margin-bottom:.9rem}
+  .opts{display:grid;gap:.5rem}
+  @media(min-width:600px){.opts{grid-template-columns:1fr 1fr}}
+  .opt{font:inherit;font-weight:400;text-align:left;background:rgba(122,46,69,.05);color:var(--cream);border:1px solid rgba(180,131,74,.3);padding:.75rem .95rem;border-radius:6px;cursor:pointer}
+  .opt:focus-visible{outline:2px solid var(--gold)}
+  .opt:disabled{cursor:default}
+  .opt:not(:disabled):hover{transform:translateY(-2px);border-color:var(--gold);background:rgba(180,131,74,.08)}
+  .opt{transition:transform .12s ease,background .12s ease,border-color .12s ease}
+  .opt.picked{font-weight:600;transform:scale(1.02)}
+  .verdict .emo{font-style:normal;font-size:1.4rem;margin-right:.4rem;display:inline-block;animation:pop .35s ease}
+  @keyframes pop{from{transform:scale(.4)}to{transform:scale(1)}}
+  .opt.right{border-color:var(--gold);background:rgba(180,131,74,.14)}
+  .opt.half{border-color:var(--rose);background:rgba(217,139,155,.18)}
+  .opt.wrong{border-color:var(--rose);opacity:.55}
+  .verdict{margin-top:.6rem;font-size:.95rem;color:var(--cream-dim);min-height:1.5em;font-style:italic;font-family:var(--serif);font-size:1.1rem}
+  .progress{position:sticky;top:0;z-index:5;background:rgba(247,235,231,.94);backdrop-filter:blur(6px);padding:.6rem 0;font-size:.9rem;color:var(--cream-dim);border-bottom:1px solid rgba(180,131,74,.3)}
+  .progress b{color:var(--gold)}
+
+  /* result */
+  #result{display:none;margin-top:2.5rem}
+  #result.show{display:block}
+  .score{font-family:var(--serif);font-size:clamp(3rem,10vw,6rem);line-height:1;color:var(--gold);font-style:italic}
+  .tier{border:1px solid var(--gold);padding:1.4rem 1.5rem;margin:1.2rem 0 2rem;background:rgba(180,131,74,.08)}
+  .tier h3{color:var(--cream);font-style:italic}
+  .ladder{list-style:none;margin:0;padding:0}
+  .ladder li{display:grid;grid-template-columns:70px 1fr;gap:.8rem;padding:.55rem 0;border-bottom:1px dotted rgba(180,131,74,.3);color:var(--cream-dim)}
+  .ladder li b{color:var(--gold);font-weight:500}
+  .ladder li.mine{color:var(--cream);background:rgba(217,139,155,.18);padding-left:.6rem;margin-left:-.6rem;border-left:3px solid var(--rose)}
+  .misses{margin-top:1.6rem}
+  .misses li{margin:.3rem 0;color:var(--cream-dim)}
+  .misses li b{color:var(--cream)}
+  textarea,input{font:inherit;font-weight:300;width:100%;background:rgba(122,46,69,.05);color:var(--cream);border:1px solid rgba(209,168,106,.3);border-radius:6px;padding:.8rem .9rem}
+  textarea{min-height:90px;resize:vertical}
+  .send{margin-top:1rem;display:flex;gap:.8rem;flex-wrap:wrap}
+  .btn.gold{background:#7a2e45;color:#fff}
+  .btn.ghost{background:transparent;color:var(--cream);border-color:var(--cream-dim)}
+
+  footer{padding:3rem 1.25rem 4rem;text-align:center;color:var(--cream-dim);font-size:.9rem;font-family:var(--serif);font-style:italic;font-size:1.1rem}
+</style>
+</head>
+<body>
+<div class="glow"></div>
+
+<!-- ================= GATE ================= -->
+<section id="gate">
+  <div>
+    <svg class="heart" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.3 3 4.5 6.7 4.5c2 0 3.6 1.1 4.6 2.6.9-1.5 2.6-2.6 4.6-2.6 3.7 0 5.8 3.8 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg>
+    <div class="kicker">Dr. Nick, one question before the offer letters win.</div>
+    <div class="stare" aria-hidden="true"><div class="me" style="background-image:url(brush.jpg)"></div><div class="me" style="background-image:url(deo.jpg)"></div></div>
+    <h1>Excited to meet your Persian baddie (the one you can't stop staring at) for one last adventure before you become a tech bro?</h1>
+    <p class="lead">This is what you get for a date from a software-engineer PhD girl. All your past and future crushes are boring af.</p>
+    <div class="choices">
+      <button class="btn yes" id="yes">Yes</button>
+      <button class="btn no" id="no" tabindex="-1" aria-hidden="true">No</button>
+    </div>
+    <div class="no-note" id="noNote" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ================= ONE LONG PAGE ================= -->
+<main id="inside">
+
+  <section id="title">
+    <div class="grid4">
+      <figure style="background-image:url(hottub.jpg)"><figcaption>hot tub</figcaption></figure>
+      <figure style="background-image:url(ocean.jpg)"><figcaption>ocean</figcaption></figure>
+      <figure style="background-image:url(ojai.jpg)"><figcaption>ojai</figcaption></figure>
+      <figure style="background-image:url(drunk.jpg)"><figcaption>a little drunk</figcaption></figure>
+    </div>
+    <h1>Faranak &amp; Nick</h1>
+    <div class="dates">Big Bear Lake · September 7, 8, 9 · 2026</div>
+    <div class="scroll">scroll down, everything's on one page</div>
+  </section>
+
+  <div class="wrap">
+
+  <!-- PLAN -->
+  <section class="block" id="plan">
+    <h2>The plan</h2>
+    <p class="intro">Highs around 71–72°, nights around 52°, mostly clear. The cabin has a private hot tub, a gas fireplace, a real oven, a rain shower, and a forest trail a block and a half from the door. The city closes the hot tub at 10pm, so that's the one hard edge in all of this.</p>
+
+    <div class="day">
+      <div class="day-head"><div class="date">Monday<br>Sept 7</div><div class="wx">71° / 52° · mostly clear</div></div>
+      <div>
+        <div class="slot"><time>8:30–10</time><div><span class="what">Slow morning</span><div class="how">Wake up, morning routine, something on TV.</div></div></div>
+        <div class="slot"><time>10:30–4:30</time><div><span class="what">Drive + shopping</span><div class="how">Groceries on the way up; at the cabin by 5 at the latest. I made us a private road-trip playlist: <a href="https://open.spotify.com/playlist/11jxmob1SkUbGOoBPVryqY?si=fc7de14b76c0494b" target="_blank" rel="noopener">join it on Spotify</a> and add your songs before Monday.</div></div></div>
+        <div class="slot"><time>5:00</time><div><span class="what">Settle in</span><div class="how">Unpack, shower together, sex, face masks, TV until 6:30. Pizza dough goes in a bowl to rise.</div></div></div>
+        <div class="slot"><time>6:30–8</time><div><span class="what">Golden-hour walk</span><div class="how">The forest trail starts 1.5 blocks from the door. No summit, just pines, sunset, and altitude adjustment (we're at ~6,750 ft).</div></div></div>
+        <div class="slot"><time>8:00–9</time><div><span class="what">Pizza in, backgammon out</span><div class="how">Stretch, top, oven as hot as it goes. Nard on the island bar while it bakes.</div></div></div>
+        <div class="slot"><time>9:00–10:30</time><div><span class="what">Pizza, then hot tub</span><span class="flag">tub closes 10pm</span><div class="how">Wine, cheese and bread in the tub until the city says no; the rest of the bottle moves to the fireplace.</div></div></div>
+        <div class="slot"><time>10:30–</time><div><span class="what">Sex</span><div class="how">Then shower, night routine, sleep.</div></div></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-head"><div class="date">Tuesday<br>Sept 8</div><div class="wx">72° / 53° · clear</div></div>
+      <div>
+        <div class="slot"><time>8:30–9</time><div><span class="what">Wake up, routine</span></div></div>
+        <div class="slot"><time>9:00–9:30</time><div><span class="what">Couples yoga</span><div class="how">Thirty minutes on the rug. Flow is at the bottom of the page.</div></div></div>
+        <div class="slot"><time>9:30</time><div><span class="what">American breakfast</span><div class="how">You cook. I watch and judge lovingly.</div></div></div>
+        <div class="slot"><time>11:00–4</time><div><span class="what">Hike + lake + lunch</span><div class="how">Castle Rock Trail (2.7 mi, steep, lake view from the top) or Pine Knot to Grand View Point (7 mi, shaded). Lunch in the Village. If the mood strikes, Bear Mountain Golf Course is 0.8 mi from the cabin.</div></div></div>
+        <div class="slot"><time>4:00–7</time><div><span class="what">Home</span><div class="how">Shower, snacks, sex or whatever we're in the mood for.</div></div></div>
+        <div class="slot"><time>7:00–8:30</time><div><span class="what">Billiards, beer, wings</span><div class="how"><b>Sandy's Sports Bar</b> on Big Bear Blvd: tournament-size pool tables, wings and fries, open till 10 on Tuesdays. Two miles from the cabin.</div></div></div>
+        <div class="slot"><time>8:30–10</time><div><span class="what">Hot tub, round two</span><span class="flag">out by 10</span><div class="how">Then shower. Pasta if we're hungry.</div></div></div>
+        <div class="slot"><time>10:00–</time><div><span class="what">Movie, then sex</span><div class="how">Fireplace on either way. Night routine after.</div></div></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-head"><div class="date">Wednesday<br>Sept 9</div><div class="wx">low 70s · clear</div></div>
+      <div>
+        <div class="slot"><time>9:00</time><div><span class="what">Breakfast, pack</span><div class="how">Checkout is 10.</div></div></div>
+        <div class="slot"><time>12:30</time><div><span class="what">Persian lunch in Westwood</span><div class="how">About 2¼ hours down the mountain. <b>Taste of Tehran</b> (tiny, tastes like Tehran) or <b>Shamshiri Grill</b> (the classic). I order for both of us.</div></div></div>
+        <div class="slot"><time>3:00</time><div><span class="what">Back to Santa Barbara</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOMENTS -->
+  <section class="block" id="moments">
+    <h2>Evidence</h2>
+    <p class="intro">Tap a photo. There's a message on the back.</p>
+    <div class="polaroids">
+      <div class="pol" tabindex="0" role="button" aria-label="flip"><div class="inner"><div class="front" style="background-image:url(koobideh.jpg)"></div><div class="back"><p>Wanna buy me another round of koobideh?</p></div></div></div>
+      <div class="pol" tabindex="0" role="button" aria-label="flip"><div class="inner"><div class="front" style="background-image:url(pizza.jpg)"></div><div class="back"><p>You bought me pizza once. Wanna make me one now?</p></div></div></div>
+      <div class="pol" tabindex="0" role="button" aria-label="flip"><div class="inner"><div class="front" style="background-image:url(funny3.jpg)"></div><div class="back"><p>Your caption here.</p></div></div></div>
+      <div class="pol" tabindex="0" role="button" aria-label="flip"><div class="inner"><div class="front" style="background-image:url(funny4.jpg)"></div><div class="back"><p>Your caption here.</p></div></div></div>
+    </div>
+  </section>
+
+  <!-- FOOD & WINE -->
+  <section class="block" id="food">
+    <h2>Food &amp; wine</h2>
+    <div class="grid two">
+      <div class="card">
+        <h3>Monday night pizza</h3>
+        <ul>
+          <li>Dough made in SB the night before, cold-fermented, finishes rising at the cabin</li>
+          <li>Margherita with torn basil</li>
+          <li>One wildcard pie: your toppings, my veto</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>In the glass</h3>
+        <ul>
+          <li>Pinot Noir from Santa Barbara, that one's mine</li>
+          <li>Whatever you like, grab it before we leave</li>
+          <li>Cheese and bread platter for the hot tub, in the host's insulated mugs and boards, no glass by the water</li>
+          <li>Tuesday late: pasta if we're hungry after Sandy's</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAMES -->
+  <section class="block" id="games">
+    <h2>Games</h2>
+    <p class="intro">Your people gave the world chess. Legend says the Sasanian court answered with <i>nard</i> and sent it back as a riddle nobody could solve. Fifteen hundred years later, one Indian-American with a fresh PhD thinks he can beat a Persian at backgammon. Persia is not for beginners. Ready to lose? No cheating this time.</p>
+    <div class="grid two">
+      <div class="card">
+        <svg class="pic" viewBox="0 0 240 120" aria-hidden="true"><rect x="2" y="2" width="236" height="116" rx="6" fill="#fff8f4" stroke="#b4834a" stroke-width="3"/><g id="tri"><polygon points="10,6 28,6 19,58" fill="#f1dcd8" opacity=".85"/><polygon points="28,6 46,6 37,58" fill="#7a2e45" opacity=".85"/><polygon points="46,6 64,6 55,58" fill="#f1dcd8" opacity=".85"/><polygon points="64,6 82,6 73,58" fill="#7a2e45" opacity=".85"/><polygon points="82,6 100,6 91,58" fill="#f1dcd8" opacity=".85"/><polygon points="100,6 118,6 109,58" fill="#7a2e45" opacity=".85"/><polygon points="128,6 146,6 137,58" fill="#f1dcd8" opacity=".85"/><polygon points="146,6 164,6 155,58" fill="#7a2e45" opacity=".85"/><polygon points="164,6 182,6 173,58" fill="#f1dcd8" opacity=".85"/><polygon points="182,6 200,6 191,58" fill="#7a2e45" opacity=".85"/><polygon points="200,6 218,6 209,58" fill="#f1dcd8" opacity=".85"/><polygon points="218,6 236,6 227,58" fill="#7a2e45" opacity=".85"/><polygon points="10,114 28,114 19,62" fill="#7a2e45" opacity=".85"/><polygon points="28,114 46,114 37,62" fill="#f1dcd8" opacity=".85"/><polygon points="46,114 64,114 55,62" fill="#7a2e45" opacity=".85"/><polygon points="64,114 82,114 73,62" fill="#f1dcd8" opacity=".85"/><polygon points="82,114 100,114 91,62" fill="#7a2e45" opacity=".85"/><polygon points="100,114 118,114 109,62" fill="#f1dcd8" opacity=".85"/><polygon points="128,114 146,114 137,62" fill="#7a2e45" opacity=".85"/><polygon points="146,114 164,114 155,62" fill="#f1dcd8" opacity=".85"/><polygon points="164,114 182,114 173,62" fill="#7a2e45" opacity=".85"/><polygon points="182,114 200,114 191,62" fill="#f1dcd8" opacity=".85"/><polygon points="200,114 218,114 209,62" fill="#7a2e45" opacity=".85"/><polygon points="218,114 236,114 227,62" fill="#f1dcd8" opacity=".85"/></g><rect x="117" y="2" width="6" height="116" fill="#b4834a"/><circle cx="30" cy="30" r="9" fill="#7a2e45"/><circle cx="30" cy="50" r="9" fill="#7a2e45"/><circle cx="210" cy="90" r="9" fill="#d98b9b"/><circle cx="210" cy="70" r="9" fill="#d98b9b"/><circle cx="150" cy="30" r="9" fill="#d98b9b"/><circle cx="90" cy="90" r="9" fill="#7a2e45"/></svg>
+        <h3>Nard: doubles &amp; dares</h3>
+        <p class="muted">Regular backgammon, bottle open, four extra rules. Best of three, the winner picks the movie.</p>
+        <ol>
+          <li><b>Roll doubles</b>: other player drinks, or answers one honest question. Their pick.</li>
+          <li><b>Get hit</b>: one sip and one specific compliment, out loud.</li>
+          <li><b>Gammon</b>: loser owes a ten-minute massage tonight.</li>
+          <li><b>Caught cheating</b>: forfeit the game and any right to complain.</li>
+        </ol>
+      </div>
+      <div class="card">
+        <svg class="pic" viewBox="0 0 240 120" aria-hidden="true"><g transform="rotate(-12 80 70)"><rect x="40" y="20" width="70" height="100" rx="8" fill="#fff8f4" stroke="#b4834a" stroke-width="3"/><path d="M75 82c-14-9-22-17-22-27a11 11 0 0 1 22-3 11 11 0 0 1 22 3c0 10-8 18-22 27z" fill="#7a2e45"/><text x="48" y="40" font-family="Georgia" font-size="16" fill="#7a2e45">A</text></g><g transform="rotate(8 150 70)"><rect x="115" y="14" width="70" height="100" rx="8" fill="#fff8f4" stroke="#b4834a" stroke-width="3"/><text x="130" y="76" font-family="Georgia" font-style="italic" font-size="30" fill="#d98b9b">?</text><text x="123" y="34" font-family="Georgia" font-size="16" fill="#d98b9b">K</text></g><g><rect x="192" y="60" width="34" height="34" rx="7" fill="#7a2e45"/><circle cx="201" cy="69" r="3.5" fill="#fff8f4"/><circle cx="217" cy="69" r="3.5" fill="#fff8f4"/><circle cx="209" cy="77" r="3.5" fill="#fff8f4"/><circle cx="201" cy="85" r="3.5" fill="#fff8f4"/><circle cx="217" cy="85" r="3.5" fill="#fff8f4"/></g></svg>
+        <h3>Card games for two</h3>
+        <ul>
+          <li><b>We're Not Really Strangers</b>: three levels of questions that get real fast. The one for the fireplace.</li>
+          <li><b>Let's Get Deep</b>: same idea, funnier, drinks well.</li>
+          <li><b>Talk, Flirt, Dare</b>: three decks, escalating. For after the tub.</li>
+          <li><b>The Hot Tub deck (ours)</b>: a normal deck of cards. Red card: you answer. Black: I do. Face card: the question is about tonight. Ace: a dare.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="block" id="quiz">
+    <h2>How well do you know me?</h2>
+    <p class="intro">Fill the questionnaire and earn a hot reward, my kinky nerd. Four options, one right answer (one question has a half-credit trap, you'll see). The dots are difficulty: one is easy, three means you should've been paying attention. Answer shows the second you pick. Your score decides what you get in the cabin, and yes, I get a copy.</p>
+    <div class="progress"><span id="prog">0 of 0 answered</span> · <b id="pts">0 pts</b></div>
+    <div id="qs"></div>
+
+    <div id="result">
+      <div class="score" id="scoreNum"></div>
+      <div class="muted" id="scoreLine"></div>
+      <div class="tier" id="tierBox"></div>
+      <h3>The full ladder, so you know what you missed</h3>
+      <ul class="ladder" id="ladder"></ul>
+      <div class="misses" id="misses"></div>
+      <h3 style="margin-top:2rem">Before you send it</h3>
+      <p class="muted">Any movie suggestions for the two nights? And anything else you want to say.</p>
+      <textarea id="note" placeholder="Movies you want to watch, or anything else…"></textarea>
+      <div class="send">
+        <button class="btn gold" id="sendBtn">Send Faranak my results</button>
+        <button class="btn ghost" id="copyBtn">Copy results instead</button>
+      </div>
+      <p class="muted" id="sendNote" style="font-size:.9rem"></p>
+    </div>
+  </section>
+
+  <!-- MOVIES -->
+  <section class="block" id="movies">
+    <h2>Movies</h2>
+    <p class="intro">Netflix, Hulu and Disney+ are on the cabin TV. Two nights, so two picks. Add yours in the quiz box above. Titles link to where each one is streaming.</p>
+    <ul class="list">
+      <li><b><a href="https://www.justwatch.com/us/search?q=Fifty%20Shades%20of%20Grey" target="_blank" rel="noopener">Fifty Shades of Grey</a></b><span>Night two. You know why.</span></li>
+      <li><b><a href="https://www.justwatch.com/us/search?q=Past%20Lives" target="_blank" rel="noopener">Past Lives</a></b><span>Two people, two countries, a lifetime of what-if.</span></li>
+      <li><b><a href="https://www.justwatch.com/us/search?q=Before%20Sunrise" target="_blank" rel="noopener">Before Sunrise</a></b><span>One night, one city, two people who won't stop talking.</span></li>
+      <li><b><a href="https://www.justwatch.com/us/search?q=Challengers" target="_blank" rel="noopener">Challengers</a></b><span>Tennis, tension, a soundtrack that belongs in a hot tub.</span></li>
+      <li><b><a href="https://www.justwatch.com/us/search?q=Palm%20Springs" target="_blank" rel="noopener">Palm Springs</a></b><span>A time-loop rom-com smarter than it looks. Wine required.</span></li>
+    </ul>
+  </section>
+
+  <!-- MUSIC -->
+  <section class="block" id="music">
+    <h2>Songs to dance to on the rug</h2>
+    <ul class="list">
+      <li><b><a href="https://open.spotify.com/search/Siah%20o%20Sefid%20Shadmehr%20Aghili" target="_blank" rel="noopener">Siah o Sefid, Shadmehr Aghili</a></b><span>Every Persian wedding. Now ours. I'll lead.</span></li>
+      <li><b><a href="https://open.spotify.com/search/Fire%20on%20Fire%20Sam%20Smith" target="_blank" rel="noopener">Fire on Fire, Sam Smith</a></b><span>Slow. Fireplace on.</span></li>
+      <li><b><a href="https://open.spotify.com/search/Perfect%20Ed%20Sheeran" target="_blank" rel="noopener">Perfect, Ed Sheeran</a></b><span>Predictable. Still works.</span></li>
+      <li><b><a href="https://open.spotify.com/search/Gole%20Yakh%20Kourosh%20Yaghmaei" target="_blank" rel="noopener">Gole Yakh, Kourosh Yaghmaei</a></b><span>The Persian slow dance. I'll teach you the sway.</span></li>
+      <li><b><a href="https://open.spotify.com/search/Thinking%20Out%20Loud%20Ed%20Sheeran" target="_blank" rel="noopener">Thinking Out Loud, Ed Sheeran</a></b><span>For the last night.</span></li>
+    </ul>
+    <p style="margin-top:1.2rem"><a class="btn gold" href="https://open.spotify.com/playlist/11jxmob1SkUbGOoBPVryqY?si=fc7de14b76c0494b" target="_blank" rel="noopener" style="display:inline-block;text-decoration:none">Join the Big Bear road-trip playlist</a></p>
+    <p class="muted">Bring a speaker. After 10pm the dancing moves inside.</p>
+  </section>
+
+  <!-- MORNINGS -->
+  <section class="block" id="morning">
+    <h2>Tuesday morning: thirty minutes on the rug</h2>
+    <p class="intro">No weights in the cabin, so breath and bodyweight. Couples yoga, six shapes, no experience needed.</p>
+    <div class="card">
+      <ol>
+        <li><b>Back-to-back breathing, 3 min</b>: sit cross-legged, spines touching, match breaths.</li>
+        <li><b>Partner forward fold, 3 min each</b>: sit facing, feet touching, hold wrists; one leans back, the other folds. Swap.</li>
+        <li><b>Double downward dog, 2 min</b>: one in down dog, the other walks their feet onto the first person's lower back. Laughing is part of the pose.</li>
+        <li><b>Partner boat, 2 min</b>: sit facing, hold hands, soles together, lift to a V. Engineers may discuss the moment balance.</li>
+        <li><b>Seated twist, 2 min each side</b>: back-to-back, twist toward each other, reach for the other's knee.</li>
+        <li><b>Savasana, heads touching, 5 min</b>: then you make breakfast.</li>
+      </ol>
+    </div>
+  </section>
+
+  </div>
+  <footer>Sept 7–9, 2026 · Big Bear Lake · for Nick, from F.</footer>
+</main>
+
+<script>
+/* ============================================================
+   CONFIG: edit here
+   ============================================================ */
+const EMAIL = "faranakrajabi@ucsb.edu";   // where his results go
+
+// Reward ladder: first entry whose `min` the score reaches wins. Percent of total points.
+const LADDER = [
+  { min:100, text:"Do whatever you want, sir." },
+  { min:90,  text:"What about reverse cowgirl?" },
+  { min:80,  text:"Congrats. I might unlock doggy for you once again." },
+  { min:70,  text:"On all fours for you. Maybe the handcuffs get tried." },
+  { min:60,  text:"You're going down first. Then you get me on all fours." },
+  { min:50,  text:"You're going down first. Maybe missionary afterwards." },
+  { min:40,  text:"Doesn't look good. Maybe just listen to what I say." },
+  { min:30,  text:"Oh wow. Do you want to date someone else?" },
+  { min:20,  text:"I can't believe this. Did you take the quiz right?" },
+  { min:0,   text:"Alright, we're done. Not because you don't know me: because your IQ is less than room temperature." }
+];
+
+// Questions. lvl = 1 easy, 2 medium, 3 hard. Options are shuffled on load.
+// Mark the right option with {t:"...", ok:true}; a half-credit option with {t:"...", half:true}.
+// `note` shows after he answers.
+const Q = [
+  {lvl:1, q:"What's my pet's name?", o:[{t:"Ponyo",ok:1},{t:"Sosuke"},{t:"Kibo"},{t:"Boojie"}]},
+  {lvl:1, q:"What's my favorite car? (I know what you're going to pick. I recently changed it.)", o:[{t:"Mercedes G-Class",half:1},{t:"Audi R8"},{t:"Land Cruiser"},{t:"Maybach G-Class Landaulet G650",ok:1}], note:"Mercedes was the old answer, so half a point."},
+  {lvl:1, q:"What's my favorite Persian food?", o:[{t:"Koobideh",ok:1},{t:"Barg"},{t:"Ghormeh sabzi"},{t:"Gheimeh"}]},
+  {lvl:1, q:"When was our first date?", o:[{t:"May 5th"},{t:"May 23rd",ok:1},{t:"June 3rd"},{t:"May 10th"}]},
+  {lvl:1, q:"What's my favorite song?", o:[{t:"Range Messi by Onedam"},{t:"Deutschland by Rammstein"},{t:"Sober by Tool",ok:1},{t:"Fire on Fire by Sam Smith"}]},
+  {lvl:2, q:"My favorite holiday destination?", o:[{t:"Japan"},{t:"Hawaii"},{t:"UAE",ok:1},{t:"Switzerland"}]},
+  {lvl:1, q:"Where am I going first when I get my green card?", o:[{t:"Mashhad, Iran",ok:1},{t:"Dubai, UAE"},{t:"Madrid, Spain"},{t:"Istanbul, Turkey"}]},
+  {lvl:1, q:"Where am I going once I have a free-Iran passport?", o:[{t:"Tel Aviv",ok:1},{t:"Somewhere in Europe"},{t:"Mexico"},{t:"Japan"}]},
+  {lvl:2, q:"My favorite reading genre?", o:[{t:"Crime fiction"},{t:"Drama"},{t:"Psychological thrillers",ok:1},{t:"Persian poetry"}], note:"I like all of them except drama."},
+  {lvl:2, q:"My favorite movie?", o:[{t:"About Time"},{t:"12 Years a Slave"},{t:"The Pianist",ok:1},{t:"Spirited Away"}], note:"I love all four. The Pianist wins."},
+  {lvl:2, q:"How tall am I?", o:[{t:"160 cm"},{t:"162 cm"},{t:"167 cm"},{t:"165 cm",ok:1}]},
+  {lvl:2, q:"What do I miss most about Iran?", o:[{t:"The night life"},{t:"The cafés"},{t:"Parties with my friends"},{t:"Breakfast made by my parents",ok:1}]},
+  {lvl:3, q:"My saddest time since immigrating to the US?", o:[{t:"Lonely holidays: Thanksgiving, Christmas, New Year"},{t:"The car accident, when no friend picked up"},{t:"Being harassed by that person and getting the restraining order",ok:1},{t:"Going to the hospital alone and walking out on crutches"}]},
+  {lvl:1, q:"My favorite football team?", o:[{t:"Real Madrid",ok:1},{t:"Barcelona"},{t:"Bayern"},{t:"Liverpool"}]},
+  {lvl:2, q:"My favorite football team in middle school?", o:[{t:"Real Madrid"},{t:"Barcelona",ok:1},{t:"Bayern"},{t:"Liverpool"}]},
+  {lvl:1, q:"My first celebrity crush?", o:[{t:"Japan's national-team goalkeeper",ok:1},{t:"Barcelona's coach"},{t:"Cristiano Ronaldo"},{t:"Henry Cavill"}]},
+  {lvl:2, q:"My current celebrity crush?", o:[{t:"Japan's national-team goalkeeper"},{t:"Barcelona's coach"},{t:"Cristiano Ronaldo"},{t:"Henry Cavill",ok:1}], note:"I know you were going to say Cristiano."},
+  {lvl:1, q:"Which family member am I closest to?", o:[{t:"Mom"},{t:"Dad"},{t:"Brother",ok:1},{t:"Sister"}]},
+  {lvl:1, q:"Which scientist leaves me stunned?", o:[{t:"Newton"},{t:"Fourier",ok:1},{t:"Tesla"},{t:"Einstein"}]},
+  {lvl:2, q:"Who do I think is the most influential scientist?", o:[{t:"Newton",ok:1},{t:"Fourier"},{t:"Tesla"},{t:"Einstein"}]},
+  {lvl:1, q:"My favorite book?", o:[{t:"The Good Earth",ok:1},{t:"A Fraction of the Whole"},{t:"Verity"},{t:"Oracle Night"}], note:"I love all of them. The Good Earth wins."},
+  {lvl:1, q:"The game I've played since I was six?", o:[{t:"Stronghold Crusader",ok:1},{t:"Age of Empires II"},{t:"Command & Conquer: Red Alert"},{t:"Warcraft III"}]},
+  {lvl:2, q:"How many years did I deal with epilepsy?", o:[{t:"17",ok:1},{t:"19"},{t:"9"},{t:"7"}]},
+  {lvl:2, q:"What date do I want tattooed on my thigh or collarbone?", o:[{t:"My first kid's birth date"},{t:"The day I get my green card"},{t:"The date of my first fight win",ok:1},{t:"My wedding day"}]},
+  {lvl:2, q:"What do I want to do with my alone time?", o:[{t:"Work out and listen to music"},{t:"Watch math videos on YouTube"},{t:"Homemade dinner with a movie"},{t:"House chores, especially cooking, with Losers Club on",ok:1}]},
+  {lvl:3, q:"What rage-baits me most in a person?", o:[{t:"Making noises while eating"},{t:"Being slow doing a task by hand",ok:1},{t:"Replying late"},{t:"Gossiping and cursing about someone I know, in front of me"}]},
+  {lvl:1, q:"Which game am I pretty good at?", o:[{t:"Mafia",ok:1},{t:"Avalon"},{t:"Exploding Kittens"},{t:"Catan"}]},
+  {lvl:2, q:"Which part of my body do I love most?", o:[{t:"Collarbone"},{t:"Lips",ok:1},{t:"Boobs"},{t:"Waist-to-hip ratio"}]},
+  {lvl:2, q:"Who do I want to run the US next?", o:[{t:"JD Vance"},{t:"Marco Rubio",ok:1},{t:"Gavin Newsom"},{t:"Kamala Harris"}]},
+  {lvl:1, q:"Who do I want to run Iran next?", o:[{t:"Khamenei's son"},{t:"A committee of the opposition"},{t:"Reza Pahlavi",ok:1},{t:"Someone unknown"}]},
+  {lvl:1, q:"My biggest insecurity?", o:[{t:"Not being accepted by people"},{t:"My body weight"},{t:"My Iranian background"},{t:"My scientific, academic and work abilities",ok:1}]},
+  {lvl:2, q:"Who is my best girl friend?", o:[{t:"Ghazaleh",ok:1},{t:"Yeganeh"},{t:"Parvin"},{t:"Fatemeh, my sister"}]},
+  {lvl:3, q:"Who is my best guy friend?", o:[{t:"Mohammad, my brother"},{t:"Farid",ok:1},{t:"Ryan"},{t:"Parsa"}], note:"Farid. He's in London."},
+  {lvl:1, q:"Which of these have I never tried?", o:[{t:"Pilates",ok:1},{t:"Running"},{t:"MMA"},{t:"Aerial dancing"}]},
+  {lvl:1, q:"My biggest fear in a relationship?", o:[{t:"That I haven't settled with the optimal person"},{t:"That he cheats on me",ok:1},{t:"That we get divorced"},{t:"That he hurts me, hits me, abuses me"}]},
+  {lvl:1, q:"My biggest wish?", o:[{t:"A free Iran and the monarchy restored",ok:1},{t:"Becoming a CEO"},{t:"Millionaire in 12 years, retired before 40"},{t:"Contributing something big to science"}]},
+  {lvl:2, q:"Where on my body do I like to be touched gently, and more?", o:[{t:"Lips"},{t:"Boobs"},{t:"Clit"},{t:"Groin area",ok:1}]},
+  {lvl:2, q:"My favorite kind of present?", o:[{t:"Cash"},{t:"Jewelry",ok:1},{t:"Tech"},{t:"Clothes"}]},
+  {lvl:1, q:"The most emotional sexual thing we do, for me?", o:[{t:"Intercourse",ok:1},{t:"You lying on my side"},{t:"Kissing"},{t:"Pressing your body against mine"}]},
+  {lvl:2, q:"The sparking moment for me?", o:[{t:"When you touch my pussy and kiss me now and then",ok:1},{t:"When you lean on my side and touch my side"},{t:"When we cuddle under the shower"},{t:"When you tell me to get on all fours"}]},
+  {lvl:3, q:"One thing you do that turns me on?", o:[{t:"Lifting weights, doing something strong"},{t:"Having my back in front of a group, showing affection",ok:1},{t:"Paying for things, getting me presents"},{t:"Supporting my emotional waves"}]}
+];
+
+/* ------------ gate ------------ */
+(function(){
+  const no=document.getElementById('no'), yes=document.getElementById('yes'), note=document.getElementById('noNote');
+  const lines=["No.","Wrong button.","Try the other one.","Persia is not for beginners.","You sat next to me for years for this?","The hot tub is already booked.","Northrop can wait.","Still no.","This button doesn't work. The other one does."];
+  let n=0;
+  function flee(){
+    no.classList.add('fleeing');
+    const w=no.offsetWidth,h=no.offsetHeight,pad=16;
+    no.style.left=(pad+Math.random()*(innerWidth-w-pad*2))+'px';
+    no.style.top=(pad+Math.random()*(innerHeight-h-pad*2))+'px';
+    note.textContent=lines[Math.min(n,lines.length-1)]; n++;
+    yes.style.transform='scale('+Math.min(1+n*.05,1.4)+')';
+  }
+  no.addEventListener('mouseenter',flee);
+  no.addEventListener('touchstart',e=>{e.preventDefault();flee();},{passive:false});
+  no.addEventListener('click',e=>{e.preventDefault();flee();});
+  yes.addEventListener('click',()=>{
+    document.getElementById('gate').style.display='none'; no.remove();
+    document.getElementById('inside').classList.add('open'); scrollTo({top:0});
+  });
+})();
+
+/* ------------ flips & taps ------------ */
+document.querySelectorAll('.pol').forEach(el=>{
+  const f=()=>el.classList.toggle('flipped');
+  el.addEventListener('click',f);
+  el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();f();}});
+});
+document.querySelectorAll('.grid4 figure').forEach(el=>el.addEventListener('click',()=>el.classList.toggle('show')));
+
+/* ------------ quiz ------------ */
+(function(){
+  const qs=document.getElementById('qs'), prog=document.getElementById('prog'), ptsEl=document.getElementById('pts');
+  const answers=Array(Q.length).fill(null); // {pts, picked, correctText}
+  function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+  Q.forEach(q=>q.o=shuffle(q.o.slice()));
+
+  function dots(l){return '<span class="lvl">'+[1,2,3].map(i=>'<i class="'+(i<=l?'on':'')+'"></i>').join('')+'</span>';}
+
+  Q.forEach((q,qi)=>{
+    const box=document.createElement('div'); box.className='q'; box.id='q'+qi;
+    box.innerHTML='<div class="meta"><span>'+(qi+1)+' of '+Q.length+'</span>'+dots(q.lvl)+'</div><div class="stem">'+q.q+'</div>';
+    const opts=document.createElement('div'); opts.className='opts';
+    const verdict=document.createElement('div'); verdict.className='verdict';
+    q.o.forEach((o,oi)=>{
+      const b=document.createElement('button'); b.className='opt'; b.textContent=o.t;
+      b.addEventListener('click',()=>{
+        if(answers[qi]) return;
+        const pts=o.ok?1:(o.half?0.5:0);
+        answers[qi]={pts,picked:o.t,correct:q.o.find(x=>x.ok).t};
+        [...opts.children].forEach((bb,i)=>{bb.disabled=true; const oo=q.o[i]; if(i===oi)bb.classList.add('picked'); if(oo.ok)bb.classList.add('right'); else if(oo.half&&i===oi)bb.classList.add('half'); else if(i===oi)bb.classList.add('wrong');});
+        const yay=["😘","🥰","😏","🔥","💋"], nay=["😢","🙄","😭","😤","🫠"];
+        const emo=pts===1?yay[qi%yay.length]:pts===0.5?"😉":nay[qi%nay.length];
+        verdict.innerHTML='<span class="emo">'+emo+'</span>'+(pts===1?"Correct.":pts===0.5?"Half a point.":"No. It's: "+answers[qi].correct+".")+(q.note?" "+q.note:"");
+        update();
+      });
+      opts.appendChild(b);
+    });
+    box.append(opts,verdict); qs.appendChild(box);
+  });
+
+  function update(){
+    const done=answers.filter(Boolean).length, pts=answers.reduce((s,a)=>s+(a?a.pts:0),0);
+    prog.textContent=done+' of '+Q.length+' answered'; ptsEl.textContent=pts+' pts';
+    if(done===Q.length) finish(pts);
+  }
+
+  function finish(pts){
+    const pct=Math.round(pts/Q.length*100);
+    const tier=LADDER.find(t=>pct>=t.min);
+    document.getElementById('scoreNum').textContent=pct+'%';
+    document.getElementById('scoreLine').textContent=pts+' of '+Q.length+' points.';
+    document.getElementById('tierBox').innerHTML='<h3>What you earned</h3><p>'+tier.text+'</p>';
+    document.getElementById('ladder').innerHTML=LADDER.map(t=>'<li'+(t===tier?' class="mine"':'')+'><b>'+(t.min===100?'100%':t.min+'%+')+'</b><span>'+t.text+'</span></li>').join('');
+    const miss=answers.map((a,i)=>a.pts<1?{i,a}:null).filter(Boolean);
+    document.getElementById('misses').innerHTML=miss.length?'<h3>What you got wrong</h3><ul>'+miss.map(m=>'<li>'+Q[m.i].q+'. You said <b>'+m.a.picked+'</b>, it\'s <b>'+m.a.correct+'</b></li>').join('')+'</ul>':'<p class="muted">Nothing wrong. Show-off.</p>';
+    const r=document.getElementById('result'); r.classList.add('show'); r.scrollIntoView({behavior:'smooth'});
+
+    function summary(){
+      const note=document.getElementById('note').value.trim();
+      return "Nick's Big Bear quiz\n\nScore: "+pts+"/"+Q.length+" ("+pct+"%)\nEarned: "+tier.text+"\n\nMissed:\n"+(miss.length?miss.map(m=>"- "+Q[m.i].q+" | said: "+m.a.picked+" | answer: "+m.a.correct).join("\n"):"- none")+"\n\nMovie suggestions / notes:\n"+(note||"(none)");
+    }
+    document.getElementById('sendBtn').onclick=()=>{
+      location.href="mailto:"+EMAIL+"?subject="+encodeURIComponent("Big Bear quiz: "+pct+"%")+"&body="+encodeURIComponent(summary());
+      document.getElementById('sendNote').textContent="Your mail app should have opened with everything filled in. If it didn't, use Copy and text it to me.";
+    };
+    document.getElementById('copyBtn').onclick=async()=>{
+      try{await navigator.clipboard.writeText(summary()); document.getElementById('sendNote').textContent="Copied. Text it to me.";}
+      catch(e){document.getElementById('sendNote').textContent="Couldn't copy automatically: screenshot this instead.";}
+    };
+  }
+  update();
+})();
+</script>
+</body>
+</html>
