@@ -67,11 +67,13 @@
   .us .img{width:100%;height:100%;background:var(--wine-2) url("us.jpg") center/cover no-repeat;display:grid;place-items:center}
   .us .img span{font-family:var(--serif);font-style:italic;color:var(--cream-dim);padding:1rem}
   #title h1{font-size:clamp(2.4rem,6vw,4.4rem)}
-  .grid4{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:min(90vw,620px,62svh);margin:0 auto 2rem;padding:10px;border:1px solid var(--gold);background:var(--wine);box-shadow:0 12px 40px rgba(122,46,69,.12)}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;width:min(94vw,1000px);margin:0 auto 2rem;padding:10px;border:1px solid var(--gold);background:var(--wine);box-shadow:0 12px 40px rgba(122,46,69,.12)}
   .grid4 figure{margin:0;aspect-ratio:1/1;background:var(--wine-2) center/cover no-repeat;position:relative;cursor:pointer;transition:transform .15s ease}
   .grid4 figure:active{transform:scale(.97)}
   .grid4 figcaption{position:absolute;left:0;right:0;bottom:0;padding:.4rem .6rem;font-family:var(--serif);font-style:italic;color:#fff;background:linear-gradient(transparent,rgba(59,29,40,.7));opacity:0;transition:opacity .2s}
   .grid4 figure:hover figcaption,.grid4 figure.show figcaption{opacity:1}
+  .title-pols{width:min(94vw,1000px);margin:0 auto 2rem;grid-template-columns:repeat(2,1fr)}
+  @media(min-width:720px){.title-pols{grid-template-columns:repeat(4,1fr)}}
   #title .dates{font-family:var(--serif);font-size:1.4rem;color:var(--gold);margin-top:.6rem}
   #title .scroll{margin-top:2.5rem;color:var(--cream-dim);font-size:.9rem}
 
@@ -105,6 +107,23 @@
   .pol:nth-child(odd) .inner{transform:rotate(-2deg)}.pol:nth-child(even) .inner{transform:rotate(2deg)}
   .pol.flipped:nth-child(odd) .inner{transform:rotate(-2deg) rotateY(180deg)}.pol.flipped:nth-child(even) .inner{transform:rotate(2deg) rotateY(180deg)}
   @media(prefers-reduced-motion:reduce){.pol .inner{transition:none}}
+
+  /* positions */
+  .poses{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+  @media(min-width:720px){.poses{grid-template-columns:repeat(4,1fr)}}
+  .pose{font:inherit;position:relative;aspect-ratio:4/5;border:2px solid rgba(180,131,74,.3);border-radius:10px;cursor:pointer;color:var(--cream);padding:0;overflow:hidden;
+    background:linear-gradient(160deg,#f6dcd9,#eec3c7) center/cover no-repeat;transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease}
+  .pose:hover{transform:translateY(-3px)}
+  .pose:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  .pose span{position:absolute;left:0;right:0;bottom:0;padding:.7rem;font-family:var(--serif);font-style:italic;font-size:1.35rem;color:#7a2e45;background:linear-gradient(transparent,rgba(255,248,244,.95) 45%)}
+  .pose.picked{border-color:#7a2e45;box-shadow:0 10px 30px rgba(122,46,69,.2);transform:scale(1.03)}
+  .pose.picked span::after{content:" 💋"}
+  .mine-wrap{margin-top:2rem}
+  .mine{display:none;margin-top:1.2rem;display:none;grid-template-columns:1fr;gap:1.2rem;align-items:center;background:var(--wine);border:1px solid rgba(180,131,74,.3);padding:1.2rem;box-shadow:0 8px 24px rgba(122,46,69,.1)}
+  .mine.show{display:grid;animation:rise .5s ease both}
+  @media(min-width:720px){.mine.show{grid-template-columns:1fr 1.2fr}}
+  .mine-img{aspect-ratio:4/5;background:var(--wine-2) center/cover no-repeat;border:8px solid #fff}
+  .mine p{font-family:var(--serif);font-style:italic;font-size:1.4rem;line-height:1.35;color:#7a2e45;margin:0}
 
   /* cards for food / games / lists */
   .grid{display:grid;gap:1.4rem}
@@ -188,12 +207,13 @@
 <main id="inside">
 
   <section id="title">
-    <div class="grid4">
-      <figure style="background-image:url(hottub.jpg)"><figcaption>hot tub</figcaption></figure>
-      <figure style="background-image:url(ocean.jpg)"><figcaption>ocean</figcaption></figure>
-      <figure style="background-image:url(ojai.jpg)"><figcaption>ojai</figcaption></figure>
-      <figure style="background-image:url(drunk.jpg)"><figcaption>a little drunk</figcaption></figure>
+    <div class="polaroids title-pols">
+      <div class="pol" tabindex="0" role="button" aria-label="flip"><div class="inner"><div class="front" style="background-image:url(hottub.jpg)"></div><div class="back"><p>The hot tub. Round two coming.</p></div></div></div>
+      <div class="pol" tabindex="0" role="button" aria-label="flip"><div class="inner"><div class="front" style="background-image:url(ocean.jpg)"></div><div class="back"><p>Sad, we no longer can caually do this anymore. no more money for my nails.</p></div></div></div>
+      <div class="pol" tabindex="0" role="button" aria-label="flip"><div class="inner"><div class="front" style="background-image:url(ojai.jpg)"></div><div class="back"><p>Happy with that small plate? obsessed with my make-up.</p></div></div></div>
+      <div class="pol" tabindex="0" role="button" aria-label="flip"><div class="inner"><div class="front" style="background-image:url(drunk.jpg)"></div><div class="back"><p>Am I always this hot?</p></div></div></div>
     </div>
+    <p class="muted" style="margin:-.4rem auto 1rem;text-align:center">tap a photo</p>
     <h1>Faranak &amp; Nick</h1>
     <div class="dates">Big Bear Lake · September 7, 8, 9 · 2026</div>
     <div class="scroll">scroll down, everything's on one page</div>
@@ -250,8 +270,8 @@
     <div class="polaroids">
       <div class="pol" tabindex="0" role="button" aria-label="flip"><div class="inner"><div class="front" style="background-image:url(koobideh.jpg)"></div><div class="back"><p>Wanna buy me another round of koobideh?</p></div></div></div>
       <div class="pol" tabindex="0" role="button" aria-label="flip"><div class="inner"><div class="front" style="background-image:url(pizza.jpg)"></div><div class="back"><p>You bought me pizza once. Wanna make me one now?</p></div></div></div>
-      <div class="pol" tabindex="0" role="button" aria-label="flip"><div class="inner"><div class="front" style="background-image:url(funny3.jpg)"></div><div class="back"><p>Your caption here.</p></div></div></div>
-      <div class="pol" tabindex="0" role="button" aria-label="flip"><div class="inner"><div class="front" style="background-image:url(funny4.jpg)"></div><div class="back"><p>Your caption here.</p></div></div></div>
+      <div class="pol" tabindex="0" role="button" aria-label="flip"><div class="inner"><div class="front" style="background-image:url(nard.jpg)"></div><div class="back"><p>Not letting you win by cheating like last time.</p></div></div></div>
+      <div class="pol" tabindex="0" role="button" aria-label="flip"><div class="inner"><div class="front" style="background-image:url(mask.jpg)"></div><div class="back"><p>Wanna relax by your baddie's side?</p></div></div></div>
     </div>
   </section>
 
@@ -323,13 +343,34 @@
       <ul class="ladder" id="ladder"></ul>
       <div class="misses" id="misses"></div>
       <h3 style="margin-top:2rem">Before you send it</h3>
-      <p class="muted">Any movie suggestions for the two nights? And anything else you want to say.</p>
+      <p class="muted">Any movie suggestions for the two nights? And anything else you want to say. Your position pick from below comes along too.</p>
       <textarea id="note" placeholder="Movies you want to watch, or anything else…"></textarea>
       <div class="send">
         <button class="btn gold" id="sendBtn">Send Faranak my results</button>
         <button class="btn ghost" id="copyBtn">Copy results instead</button>
       </div>
       <p class="muted" id="sendNote" style="font-size:.9rem"></p>
+    </div>
+  </section>
+
+  <!-- POSITIONS -->
+  <section class="block" id="positions">
+    <h2>Which one are you dying to try?</h2>
+    <p class="intro">Pick one. It goes in the results you send me, so choose honestly.</p>
+    <div class="poses" id="poses">
+      <button class="pose" data-pose="Missionary" style="background-image:url(pos-missionary.jpg)"><span>Missionary</span></button>
+      <button class="pose" data-pose="Cowgirl" style="background-image:url(pos-cowgirl.jpg)"><span>Cowgirl</span></button>
+      <button class="pose" data-pose="Reverse cowgirl" style="background-image:url(pos-reverse.jpg)"><span>Reverse cowgirl</span></button>
+      <button class="pose" data-pose="Doggy" style="background-image:url(pos-doggy.jpg)"><span>Doggy</span></button>
+    </div>
+    <p class="verdict" id="poseNote"></p>
+
+    <div class="mine-wrap">
+      <button class="btn gold" id="revealBtn">You know what I'm dying to try?</button>
+      <div class="mine" id="mine">
+        <div class="mine-img" style="background-image:url(mine.jpg)"></div>
+        <p>Spooning, with a twist. Both of us lying down, my back to your front, and I turn my hips toward you. Tuesday night.</p>
+      </div>
     </div>
   </section>
 
@@ -477,6 +518,17 @@ document.querySelectorAll('.pol').forEach(el=>{
 });
 document.querySelectorAll('.grid4 figure').forEach(el=>el.addEventListener('click',()=>el.classList.toggle('show')));
 
+/* ------------ positions ------------ */
+let POSE=null;
+document.querySelectorAll('.pose').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.pose').forEach(x=>x.classList.remove('picked'));
+  b.classList.add('picked'); POSE=b.dataset.pose;
+  document.getElementById('poseNote').innerHTML='<span class="emo">😏</span>Noted. '+POSE+'. We\'ll see how the quiz goes.';
+}));
+document.getElementById('revealBtn').addEventListener('click',function(){
+  document.getElementById('mine').classList.add('show'); this.remove();
+});
+
 /* ------------ quiz ------------ */
 (function(){
   const qs=document.getElementById('qs'), prog=document.getElementById('prog'), ptsEl=document.getElementById('pts');
@@ -527,7 +579,7 @@ document.querySelectorAll('.grid4 figure').forEach(el=>el.addEventListener('clic
 
     function summary(){
       const note=document.getElementById('note').value.trim();
-      return "Nick's Big Bear quiz\n\nScore: "+pts+"/"+Q.length+" ("+pct+"%)\nEarned: "+tier.text+"\n\nMissed:\n"+(miss.length?miss.map(m=>"- "+Q[m.i].q+" | said: "+m.a.picked+" | answer: "+m.a.correct).join("\n"):"- none")+"\n\nMovie suggestions / notes:\n"+(note||"(none)");
+      return "Nick's Big Bear quiz\n\nScore: "+pts+"/"+Q.length+" ("+pct+"%)\nEarned: "+tier.text+"\n\nMissed:\n"+(miss.length?miss.map(m=>"- "+Q[m.i].q+" | said: "+m.a.picked+" | answer: "+m.a.correct).join("\n"):"- none")+"\n\nPosition he's dying to try: "+(POSE||"(didn't pick)")+"\n\nMovie suggestions / notes:\n"+(note||"(none)");
     }
     document.getElementById('sendBtn').onclick=()=>{
       location.href="mailto:"+EMAIL+"?subject="+encodeURIComponent("Big Bear quiz: "+pct+"%")+"&body="+encodeURIComponent(summary());
