@@ -11,21 +11,6 @@ I'm interested in **Computational Science and Engineering (CSE)** for applicatio
 
 ### Multiscale Continuum Framework for Protein Aggregation
 
-I'm developing a computational framework to predict long-term stability of high-concentration biotherapeutic formulations. This work addresses a critical challenge in pharmaceutical development: protein aggregation can limit drug shelf-life and cause adverse immune responses, but current models cannot bridge molecular-scale physics with shelf-life timescales.
-
-**Key contributions:**
-- **Level-set representation** of evolving protein aggregate boundaries on adaptive octree grids
-- **Continuum transport equations** coupled with stochastic nucleation events
-- **Robin boundary conditions** derived from Wertheim Thermodynamic Perturbation Theory to capture surface binding affinities
-- **Parallel implementation** using the CASL library with demonstrated scaling to 1000+ cores
-- Integration of long-range interactions (electrostatics via Poisson-Boltzmann, hydrodynamics via Stokes flow)
-
-**Impact:** This framework enables pharmaceutical companies to predict stability from short-term measurements, accelerating drug development and reducing costs.
-
-**Technologies:** C++, PETSc, MPI, p4est adaptive mesh refinement, level-set methods
-
-**Status:** Ongoing dissertation research (2024-2026)
-
 <h3>Explore the Virtual Vial</h3>
 
 <p>An interactive introduction to my protein aggregation research. Click the presentation or use its arrow buttons to advance.</p>
@@ -44,6 +29,21 @@ I'm developing a computational framework to predict long-term stability of high-
     Open full presentation ↗
   </a>
 </p>
+
+I'm developing a computational framework to predict long-term stability of high-concentration biotherapeutic formulations. This work addresses a critical challenge in pharmaceutical development: protein aggregation can limit drug shelf-life and cause adverse immune responses, but current models cannot bridge molecular-scale physics with shelf-life timescales.
+
+**Key contributions:**
+- **Level-set representation** of evolving protein aggregate boundaries on adaptive octree grids
+- **Continuum transport equations** coupled with stochastic nucleation events
+- **Robin boundary conditions** derived from Wertheim Thermodynamic Perturbation Theory to capture surface binding affinities
+- **Parallel implementation** using the CASL library with demonstrated scaling to 1000+ cores
+- Integration of long-range interactions (electrostatics via Poisson-Boltzmann, hydrodynamics via Stokes flow)
+
+**Impact:** This framework enables pharmaceutical companies to predict stability from short-term measurements, accelerating drug development and reducing costs.
+
+**Technologies:** C++, PETSc, MPI, p4est adaptive mesh refinement, level-set methods
+
+**Status:** Ongoing dissertation research (2024-2026)
 
 ---
 
