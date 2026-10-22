@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Virtual Vial — Grad Slam</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:#12141a;overflow:hidden;font-family:Arial,sans-serif}
+#slide{position:absolute;width:1600px;height:900px;left:50%;top:50%;transform:translate(-50%,-50%) scale(var(--scale,1));background:#fff;overflow:hidden;transform-origin:center}
+.asset{position:absolute;display:none;object-fit:fill}.asset.show{display:block}
+#vial{left:16px;top:16px;width:239px;height:283px}
+#microscopy{left:255px;top:16px;width:515px;height:283px}
+#fridge{left:20px;top:304px;width:750px;height:300px}
+#years{left:21px;top:307px;width:369px;height:100px}
+#minutes{left:390px;top:307px;width:382px;height:100px}
+#your_recipe{left:30px;top:445px;width:300px;height:91px}
+#how_stable{left:338px;top:445px;width:376px;height:93px}
+#recipe{left:20px;top:548px;width:288px;height:285px}
+#plot{left:302px;top:540px;width:472px;height:323px}
+#rightMask{position:absolute;left:805px;top:5px;width:790px;height:0;overflow:hidden;transition:height .18s ease-out}
+#rightMask video{position:absolute;left:0;top:0;width:790px;height:892px;object-fit:fill;pointer-events:none}
+#hud{position:fixed;right:12px;bottom:12px;background:#1d2432d9;color:white;padding:7px 12px;border-radius:8px;font:14px Arial;z-index:10}
+button{background:#334155;color:white;border:1px solid #64748b;border-radius:5px;padding:4px 10px;cursor:pointer}
+@media print{#hud{display:none}}
+</style></head><body><main id="slide" aria-label="Grad Slam presentation">
+<img id="vial" class="asset" src="vial_tight.png"><img id="microscopy" class="asset" src="microscopy_tight.png">
+<img id="fridge" class="asset" src="fridge_testing.png" alt="Refrigerator stability testing and calendar">
+<img id="years" class="asset" src="years_tight.png"><img id="minutes" class="asset" src="minutes_tight.png">
+<img id="your_recipe" class="asset" src="your_recipe_tight.png"><img id="how_stable" class="asset" src="how_stable_tight.png">
+<img id="recipe" class="asset" src="recipe.png"><img id="plot" class="asset" src="plot.png">
+<div id="rightMask"><video id="video" src="grid.mp4" autoplay muted loop playsinline preload="auto"></video></div>
+</main><div id="hud"><span id="counter">0 / 13</span> &nbsp;<button id="prev">←</button> <button id="next">→</button> <button id="full">Fullscreen</button></div>
+<script>
+let step=0;const sequence=['vial','microscopy','fridge','years','minutes','right1','right2','right3','right4','your_recipe','how_stable','recipe','plot'];
+const mask=document.getElementById('rightMask'),video=document.getElementById('video');
+function render(){document.getElementById('fridge').classList.toggle('show',step===3);for(const id of ['vial','microscopy','years','minutes','your_recipe','how_stable','recipe','plot'])document.getElementById(id).classList.toggle('show',sequence.indexOf(id)<step);
+const reveal=Math.min(4,Math.max(0,step-5));mask.style.height=([0,318,380,572,892][reveal])+'px';
+document.getElementById('counter').textContent=step+' / 13';video.play().catch(()=>{});}
+function advance(n){step=Math.max(0,Math.min(13,step+n));render()}
+function fit(){document.getElementById('slide').style.setProperty('--scale',Math.min(innerWidth/1600,innerHeight/900))}
+window.addEventListener('resize',fit);
+window.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();advance(1)}else if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();advance(-1)}});
+document.getElementById('next').onclick=()=>advance(1);document.getElementById('prev').onclick=()=>advance(-1);
+document.getElementById('full').onclick=()=>document.documentElement.requestFullscreen();
+document.getElementById('slide').onclick=()=>advance(1);
+fit();render();
+</script></body></html>

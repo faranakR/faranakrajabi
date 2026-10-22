@@ -26,6 +26,25 @@ I'm developing a computational framework to predict long-term stability of high-
 
 **Status:** Ongoing dissertation research (2024-2026)
 
+<h3>Explore the Virtual Vial</h3>
+
+<p>An interactive introduction to my protein aggregation research. Click the presentation or use its arrow buttons to advance.</p>
+
+<iframe
+  src="/assets/virtual-vial/presentation.html"
+  title="Virtual Vial: Protein Aggregation"
+  style="display:block; width:100%; aspect-ratio:16/9; border:0;"
+  allow="autoplay; fullscreen"
+  allowfullscreen>
+</iframe>
+
+<p>
+  <a href="/assets/virtual-vial/presentation.html"
+     target="_blank" rel="noopener">
+    Open full presentation ↗
+  </a>
+</p>
+
 ---
 
 ## 2. Advanced Computational Techniques for Optimal Control
