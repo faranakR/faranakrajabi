@@ -16,7 +16,7 @@ I'm interested in **Computational Science and Engineering (CSE)** for applicatio
 <p>An interactive introduction to my protein aggregation research. Click the presentation or use its arrow buttons to advance.</p>
 
 <iframe
-  src="/assets/virtual-vial/presentation.html"
+  src="/assets/virtual-vial/presentation.html?v=final2"
   title="Virtual Vial: Protein Aggregation"
   style="display:block; width:100%; aspect-ratio:16/9; border:0;"
   allow="autoplay; fullscreen"
